@@ -1,0 +1,379 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\WPFPresntationLayer\\WPFPresntationLayer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessInerface\\DataAccessInerface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessInerface\\DataAccessInerface.csproj",
+        "projectName": "DataAccessInerface",
+        "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessInerface\\DataAccessInerface.csproj",
+        "packagesPath": "C:\\Users\\marwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessInerface\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj": {
+                "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessLayer\\DataAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectName": "DataAccessLayer",
+        "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\marwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessInerface\\DataAccessInerface.csproj": {
+                "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessInerface\\DataAccessInerface.csproj"
+              },
+              "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj": {
+                "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj",
+        "projectName": "DataObject",
+        "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj",
+        "packagesPath": "C:\\Users\\marwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayerInerface\\LogicLayerInerface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayerInerface\\LogicLayerInerface.csproj",
+        "projectName": "LogicLayerInerface",
+        "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayerInerface\\LogicLayerInerface.csproj",
+        "packagesPath": "C:\\Users\\marwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayerInerface\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj": {
+                "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayer\\LogicLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayer\\LogicLayer.csproj",
+        "projectName": "LogicLayer",
+        "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayer\\LogicLayer.csproj",
+        "packagesPath": "C:\\Users\\marwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessInerface\\DataAccessInerface.csproj": {
+                "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessInerface\\DataAccessInerface.csproj"
+              },
+              "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessLayer\\DataAccessLayer.csproj"
+              },
+              "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj": {
+                "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj"
+              },
+              "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayerInerface\\LogicLayerInerface.csproj": {
+                "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayerInerface\\LogicLayerInerface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\WPFPresntationLayer\\WPFPresntationLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\WPFPresntationLayer\\WPFPresntationLayer.csproj",
+        "projectName": "WPFPresntationLayer",
+        "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\WPFPresntationLayer\\WPFPresntationLayer.csproj",
+        "packagesPath": "C:\\Users\\marwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\WPFPresntationLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj": {
+                "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj"
+              },
+              "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayerInerface\\LogicLayerInerface.csproj": {
+                "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayerInerface\\LogicLayerInerface.csproj"
+              },
+              "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayer\\LogicLayer.csproj": {
+                "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayer\\LogicLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

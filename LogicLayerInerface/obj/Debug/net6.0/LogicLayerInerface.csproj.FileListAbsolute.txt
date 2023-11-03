@@ -1,0 +1,15 @@
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\bin\Debug\net6.0\LogicLayerInerface.deps.json
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\bin\Debug\net6.0\LogicLayerInerface.dll
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\bin\Debug\net6.0\LogicLayerInerface.pdb
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\bin\Debug\net6.0\DataObject.dll
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\bin\Debug\net6.0\DataObject.pdb
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\obj\Debug\net6.0\LogicLayerInerface.csproj.AssemblyReference.cache
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\obj\Debug\net6.0\LogicLayerInerface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\obj\Debug\net6.0\LogicLayerInerface.AssemblyInfoInputs.cache
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\obj\Debug\net6.0\LogicLayerInerface.AssemblyInfo.cs
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\obj\Debug\net6.0\LogicLayerInerface.csproj.CoreCompileInputs.cache
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\obj\Debug\net6.0\LogicLayerInerface.csproj.CopyComplete
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\obj\Debug\net6.0\LogicLayerInerface.dll
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\obj\Debug\net6.0\refint\LogicLayerInerface.dll
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\obj\Debug\net6.0\LogicLayerInerface.pdb
+C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\LogicLayerInerface\obj\Debug\net6.0\ref\LogicLayerInerface.dll

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "LogicLayerInerface/1.0.0": {
+        "dependencies": {
+          "DataObject": "1.0.0"
+        },
+        "runtime": {
+          "LogicLayerInerface.dll": {}
+        }
+      },
+      "DataObject/1.0.0": {
+        "runtime": {
+          "DataObject.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LogicLayerInerface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataObject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

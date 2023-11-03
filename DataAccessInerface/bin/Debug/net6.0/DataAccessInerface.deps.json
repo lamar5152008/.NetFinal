@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DataAccessInerface/1.0.0": {
+        "dependencies": {
+          "DataObject": "1.0.0"
+        },
+        "runtime": {
+          "DataAccessInerface.dll": {}
+        }
+      },
+      "DataObject/1.0.0": {
+        "runtime": {
+          "DataObject.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DataAccessInerface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataObject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
