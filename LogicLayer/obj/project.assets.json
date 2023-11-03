@@ -544,19 +544,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marwa\\.nuget\\packages\\": {}
+    "C:\\Users\\Samar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayer\\LogicLayer.csproj",
+      "projectUniqueName": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayer\\LogicLayer.csproj",
       "projectName": "LogicLayer",
-      "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayer\\LogicLayer.csproj",
-      "packagesPath": "C:\\Users\\marwa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayer\\obj\\",
+      "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayer\\LogicLayer.csproj",
+      "packagesPath": "C:\\Users\\Samar\\.nuget\\packages\\",
+      "outputPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\marwa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -570,17 +570,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessInerface\\DataAccessInerface.csproj": {
-              "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessInerface\\DataAccessInerface.csproj"
+            "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessInerface\\DataAccessInerface.csproj": {
+              "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessInerface\\DataAccessInerface.csproj"
             },
-            "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataAccessLayer\\DataAccessLayer.csproj"
+            "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessLayer\\DataAccessLayer.csproj"
             },
-            "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj": {
-              "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\DataObject\\DataObject.csproj"
+            "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj": {
+              "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj"
             },
-            "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayerInerface\\LogicLayerInerface.csproj": {
-              "projectPath": "C:\\Users\\marwa\\OneDrive\\Desktop\\.NET\\FinalProject\\VisualStudioCode\\MarwaCar\\LogicLayerInerface\\LogicLayerInerface.csproj"
+            "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayerInerface\\LogicLayerInerface.csproj": {
+              "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayerInerface\\LogicLayerInerface.csproj"
             }
           }
         }
@@ -610,7 +610,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
       }
     }
   }
