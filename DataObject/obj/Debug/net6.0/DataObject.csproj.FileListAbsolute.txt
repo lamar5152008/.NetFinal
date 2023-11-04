@@ -9,3 +9,15 @@ C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\Data
 C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\DataObject\obj\Debug\net6.0\refint\DataObject.dll
 C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\DataObject\obj\Debug\net6.0\DataObject.pdb
 C:\Users\marwa\OneDrive\Desktop\.NET\FinalProject\VisualStudioCode\MarwaCar\DataObject\obj\Debug\net6.0\ref\DataObject.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataObject\bin\Debug\net6.0\DataObject.deps.json
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataObject\bin\Debug\net6.0\DataObject.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataObject\bin\Debug\net6.0\DataObject.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataObject\obj\Debug\net6.0\DataObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataObject\obj\Debug\net6.0\DataObject.AssemblyInfoInputs.cache
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataObject\obj\Debug\net6.0\DataObject.AssemblyInfo.cs
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataObject\obj\Debug\net6.0\DataObject.csproj.CoreCompileInputs.cache
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataObject\obj\Debug\net6.0\DataObject.sourcelink.json
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataObject\obj\Debug\net6.0\DataObject.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataObject\obj\Debug\net6.0\refint\DataObject.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataObject\obj\Debug\net6.0\DataObject.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataObject\obj\Debug\net6.0\ref\DataObject.dll

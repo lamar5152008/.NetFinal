@@ -57,27 +57,23 @@ namespace WPFPresntationLayer
                         lblLoginMessages.Content += role;
                         if (role == "Admin")
                         {
-                      tcAdmin.Visibility = Visibility.Visible;
+                            tcAdmin.Visibility = Visibility.Visible;
                             tcManager.Visibility = Visibility.Hidden;
                             tcResption.Visibility = Visibility.Hidden;
-
                         }
                         if (role == "Manager")
                         {
                             tcAdmin.Visibility = Visibility.Hidden;
                             tcManager.Visibility = Visibility.Visible;
                             tcResption.Visibility = Visibility.Hidden;
-
                         }
                         if (role == "Reciption")
                         {
                             tcAdmin.Visibility = Visibility.Hidden;
                             tcManager.Visibility = Visibility.Hidden;
                             tcResption.Visibility = Visibility.Visible;
-
                         }
-                    }
-                    
+                    }                    
                 }
                 else
                 {
@@ -109,6 +105,42 @@ namespace WPFPresntationLayer
               result = true;
             }
             return result;
+        }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+           bool isFormValid = validateForm();
+            if (!isFormValid) { return; }
+        }
+
+        private bool validateForm()
+        {
+            if (txtGivenName.Text.Length == 0)
+            {
+                lblAdminMessages.Content = "Given Name Require";
+                return false;
+            }
+            if (txtFamilyName.Text.Length == 0) {
+                lblAdminMessages.Content = "Family Name Require";
+                return false;
+            }
+            if (txtPhone.Text.Length == 0)
+            {
+                lblAdminMessages.Content = "Phone Require";
+                return false;
+            }
+            if (txtEmail.Text.Length == 0)
+            {
+                lblAdminMessages.Content = "Email Require";
+                return false;   
+            }
+            if (txtPassword.Text.Length == 0)
+            {
+                lblAdminMessages.Content = "Password Require";
+                return false;
+            }
+                lblAdminMessages.Content = "";
+            return true;
         }
     }
 }

@@ -47,7 +47,12 @@
                         <Label x:Name="lbl_password" Content="password"/>
                     </Grid>
                     <Grid Grid.Column="1">
-                        <PasswordBox x:Name="txt_password" />
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="19*"/>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="61*"/>
+                        </Grid.ColumnDefinitions>
+                        <PasswordBox x:Name="txt_password" Grid.ColumnSpan="3" />
                     </Grid>
                 </Grid>
                 <Grid Grid.Row="2">
@@ -70,32 +75,115 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"></RowDefinition>
                         <RowDefinition></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
                         <RowDefinition Height="30"></RowDefinition>
-
-
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <Label x:Name="lblAdmin" Content="Admin"></Label>
 
                     </Grid>
                     <Grid Grid.Row="1">
-                        <DataGrid x:Name="dgAllEmployee"></DataGrid>
+                        <DataGrid x:Name="dgAllEmployee" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True"/>
                     </Grid>
-                    <Grid Grid.Row="2"></Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Label x:Name="lblGivenName" Content="Given Name"/>
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <Label x:Name="lblFamilyName" Content="Family Name"/>
+                            </Grid>
+                            <Grid Grid.Column="2">
+                                <Label x:Name="lblPhoneNumber" Content="Phone Number"/>
+                            </Grid>
+                            <Grid Grid.Column="3">
+                                <Label x:Name="lblEmail" Content="Email"/>
+                            </Grid>
+                            <Grid Grid.Column="4">
+                                <Label x:Name="lblPassword" Content="Password"/>
+                            </Grid>
+                            <Grid Grid.Column="5">
+                                <Label x:Name="lblActive" Content="Active"/>
+                            </Grid>
+                            <Grid Grid.Column="6"></Grid>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <TextBox x:Name="txtGivenName"/>
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <TextBox x:Name="txtFamilyName"/>
+                            </Grid>
+                            <Grid Grid.Column="2">
+                                <TextBox x:Name="txtPhone"/>
+                            </Grid>
+                            <Grid Grid.Column="3">
+                                <TextBox x:Name="txtEmail"/>
+                            </Grid>
+                            <Grid Grid.Column="4">
+                                <TextBox x:Name="txtPassword"/>
+                            </Grid>
+                            <Grid Grid.Column="5">
+                                <CheckBox x:Name="cbActive"/>
+                            </Grid>
+                            <Grid Grid.Column="6">
+                                <Button x:Name="btnSubmit" Content="new" Click="btnSubmit_Click"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0"></Grid>
+                        <Grid Grid.Column="1">
+                            <Label x:Name="lblAdminMessages"/>
+                        </Grid>
+                        <Grid Grid.Column="2"></Grid>
+                    </Grid>
                 </Grid>
-                
-                
+
+
             </TabControl>
             <TabControl x:Name="tcManager">
                 <Label x:Name="lblManager" Content="Manager"></Label>
             </TabControl>
-            
+
             <TabControl x:Name="tcResption">
                 <Label x:Name="lblResption" Content="Resption"></Label>
             </TabControl>
 
 
         </Grid>
-        <Grid Grid.Row="2"></Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="11*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
     </Grid>
 </Window>
