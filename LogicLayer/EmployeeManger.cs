@@ -17,6 +17,21 @@ namespace LogicLayer
         private EmployeeVM _employeeVM = new EmployeeVM();
         private List<Employee> _employees = new List<Employee>();
 
+        public int addNewEmployee(EmployeeVM employee)
+        {
+            int employeeId = 0;
+            try
+            {
+                employeeId = _employeeAccessor.insertNewEmployee(employee);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return employeeId;
+        }
+
         public List<Employee> GetAllEmployees()
         {
             _employees = _employeeAccessor.selectAllEmployees();

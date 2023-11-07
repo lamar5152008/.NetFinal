@@ -10,6 +10,7 @@ namespace DataAccessInerface
     public interface EmployeeAccessorInterface
     {
         List<string> getEmployeeRoles(int employeeID);
+        int insertNewEmployee(EmployeeVM employee);
         List<Employee> selectAllEmployees();
         int verfiyUser(string userName, string password);
     }

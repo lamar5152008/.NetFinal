@@ -49,6 +49,33 @@ namespace DataAccessLayer
             
         }
 
+        public int insertNewEmployee(EmployeeVM employee)
+        {
+            int employeeId = 0;
+            SqlConnection conn = DataBasesConnection.createMSSqlConnection();
+            var cmd = new SqlCommand("sp_insert_employee", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@GivenName", employee.GivenName);
+            cmd.Parameters.AddWithValue("@FamilyName", employee.FamilyName);
+            cmd.Parameters.AddWithValue("@Phone", employee.Phone);
+            cmd.Parameters.AddWithValue("@Email", employee.Email);
+            cmd.Parameters.AddWithValue("@Password", employee.Password);
+            cmd.Parameters.AddWithValue("@Active", employee.Active);
+            cmd.Parameters.AddWithValue("@Role", employee.Roles[0]);
+            try
+            {
+                conn.Open();
+                employeeId = cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return employeeId;
+        }
+
         public List<Employee> selectAllEmployees()
         {
             List<Employee> employees = new List<Employee>();

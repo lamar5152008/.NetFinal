@@ -134,6 +134,30 @@ AS
 		  
 	  END
 GO
+print '' print '*** creating sp_insert_employee ***'
+GO
+CREATE PROCEDURE [dbo].[sp_insert_employee]
+(@GivenName NVARCHAR(50), @FamilyName NVARCHAR(50), @Phone NVARCHAR(11), @Email NVARCHAR(100), @Password NVARCHAR(100),  @Active bit, @Role NVARCHAR(50))
+AS    
+      BEGIN
+	      INSERT INTO [dbo].[Employee]
+	([GivenName],[FamilyName],[Phone],[Email],[PasswordHash],[Active])
+		VALUES (@GivenName,@FamilyName,@Phone,@Email,@Password,@Active);
+DECLARE @EmployeeID AS VARCHAR(100)
+SET @EmployeeID = (SELECT EmployeeID
+FROM [dbo].[Employee]
+WHERE [GivenName] = @GivenName
+AND [FamilyName] = @FamilyName
+AND [Phone] = @Phone
+AND [Email] = @Email
+AND [Active] = @Active);
+INSERT INTO [dbo].[EmployeeRole]
+	([EmployeeID],[RoleID])
+VALUES(@EmployeeID,@Role);
+return @EmployeeID;
+
+	  END
+GO
 
 	
 

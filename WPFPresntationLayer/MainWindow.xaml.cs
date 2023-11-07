@@ -111,6 +111,39 @@ namespace WPFPresntationLayer
         {
            bool isFormValid = validateForm();
             if (!isFormValid) { return; }
+            EmployeeVM employee = new EmployeeVM();
+            employee.GivenName = txtGivenName.Text;
+            employee.FamilyName = txtFamilyName.Text;
+            employee.Email = txtEmail.Text;
+            employee.Phone = txtPhone.Text;
+            employee.Active = cbActive.IsChecked == true;
+            employee.Password = txtPassword.Text;
+            employee.Roles = new List<string>();
+            employee.Roles.Add("Reciption");
+            int employeeId = 0;
+            employeeId = _employeeManger.addNewEmployee(employee);
+            if (employeeId == 0)
+            {
+                lblAdminMessages.Content = "new Employee did not save";
+            }
+            else
+            {
+                clearFormData();
+                lblAdminMessages.Content = "new employee added correctly";
+                _employees = new List<Employee>();
+                _employees = _employeeManger.GetAllEmployees();
+                dgAllEmployee.ItemsSource = _employees;
+            }
+        }
+
+        private void clearFormData()
+        {
+            txtGivenName.Text = "";
+            txtFamilyName.Text = "";
+            txtPhone.Text = "";
+            txtEmail.Text = "";
+            txtPassword.Text = "";
+            //cbActive. = false;
         }
 
         private bool validateForm()
