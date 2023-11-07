@@ -32,6 +32,13 @@ namespace LogicLayer
             return employeeId;
         }
 
+        public int deleteEmployee(Employee employee)
+        {
+            int result = 0;
+            result = _employeeAccessor.deleteEmployee(employee);
+            return result;
+        }
+
         public List<Employee> GetAllEmployees()
         {
             _employees = _employeeAccessor.selectAllEmployees();

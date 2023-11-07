@@ -175,5 +175,32 @@ namespace WPFPresntationLayer
                 lblAdminMessages.Content = "";
             return true;
         }
+
+        private void btnDeleteEmployee_Click(object sender, RoutedEventArgs e)
+        {
+             Employee employee = (Employee)dgAllEmployee.SelectedItem;
+            if (employee != null)
+            {
+                int result = _employeeManger.deleteEmployee(employee);
+                if (result == 0)
+                {
+                    lblAdminMessages.Content = "Employee did not delete yet!";
+                    return;
+                }
+                lblAdminMessages.Content = "Employee deleted correctly";
+                _employees = new List<Employee>();
+                _employees = _employeeManger.GetAllEmployees();
+                dgAllEmployee.ItemsSource = _employees;
+            }
+            else
+            {
+                lblAdminMessages.Content = "Please select an employee";
+                return;
+            }
+                
+           
+                
+           
+        }
     }
 }

@@ -13,6 +13,27 @@ namespace DataAccessLayer
 {
     public class EmployeeAccessor : EmployeeAccessorInterface
     {
+        public int deleteEmployee(Employee employee)
+        {
+            int result = 0;
+            SqlConnection conn = DataBasesConnection.createMSSqlConnection();
+            var cmd = new SqlCommand("sp_delete_employee", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@EmployeeID", employee.EmployeeID);
+            try
+            {
+                conn.Open();
+                result = cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return result;
+        }
+
         public List<string> getEmployeeRoles(int employeeID)
         {
            List<string> roles = new List<string>();

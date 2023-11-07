@@ -10,6 +10,7 @@ namespace LogicLayerInerface
     public interface EmployeeMangerInterface
     {
         public int addNewEmployee(EmployeeVM employee);
+        int deleteEmployee(Employee employee);
         public List<Employee> GetAllEmployees();
         public List<string> getEmployeeRoles(int isVerifyUser);
         public int verifyUser(string userName, string password);

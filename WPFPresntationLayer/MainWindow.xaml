@@ -159,7 +159,9 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="0"></Grid>
+                        <Grid Grid.Column="0">
+                            <Button x:Name="btnDeleteEmployee" Content="Delete Employee" Click="btnDeleteEmployee_Click"/>
+                        </Grid>
                         <Grid Grid.Column="1">
                             <Label x:Name="lblAdminMessages"/>
                         </Grid>

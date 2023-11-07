@@ -9,6 +9,7 @@ namespace DataAccessInerface
 {
     public interface EmployeeAccessorInterface
     {
+        int deleteEmployee(Employee employee);
         List<string> getEmployeeRoles(int employeeID);
         int insertNewEmployee(EmployeeVM employee);
         List<Employee> selectAllEmployees();

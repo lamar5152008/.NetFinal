@@ -129,9 +129,9 @@ CREATE PROCEDURE [dbo].[sp_select_all_employees]
 
 AS    
       BEGIN
-	      SELECT  [EmployeeID],[GivenName],[FamilyName],[Phone],[Email],[PasswordHash],[Active]
-		  FROM    [dbo].[Employee]
-		  
+	SELECT [EmployeeID],[GivenName],[FamilyName],[Phone],[Email],[PasswordHash],[Active]
+	FROM [dbo].[Employee]
+	WHERE Active = 1	  
 	  END
 GO
 print '' print '*** creating sp_insert_employee ***'
@@ -158,8 +158,18 @@ return @EmployeeID;
 
 	  END
 GO
+print '' print '*** creating sp_delete_employee ***'
+GO
+CREATE PROCEDURE [dbo].[sp_delete_employee]
+(@EmployeeID INT)
 
-	
+AS    
+      BEGIN
+	 UPDATE [dbo].[Employee]
+	SET [Active] = 0
+	WHERE EmployeeID = @EmployeeID;		  
+     END
+GO	
 
 
 
