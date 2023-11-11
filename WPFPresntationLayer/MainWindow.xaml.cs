@@ -24,8 +24,9 @@ namespace WPFPresntationLayer
     /// </summary>
     public partial class MainWindow : Window
     {
-       private EmployeeMangerInterface _employeeManger;
-        private List<Employee> _employees; 
+        private EmployeeMangerInterface _employeeManger;
+        private List<Employee> _employees;
+        Employee oldEmployee = new Employee();
         public MainWindow()
         {
             InitializeComponent();
@@ -42,14 +43,14 @@ namespace WPFPresntationLayer
         {
             var userName = txt_username.Text;
             string password = txt_password.Password.ToString();
-            
+
             Boolean isUserNameValid = validatUserName(userName);
             Boolean isPasswordValid = validatPassword(password);
-            if (isUserNameValid && isPasswordValid )
+            if (isUserNameValid && isPasswordValid)
             {
                 lblLoginMessages.Content = "user name and password valid";
                 int isVerifyUser = _employeeManger.verifyUser(userName, password);
-                if (isVerifyUser!=0 )
+                if (isVerifyUser != 0)
                 {
                     List<string> roles = new List<string>();
                     roles = _employeeManger.getEmployeeRoles(isVerifyUser);
@@ -74,7 +75,7 @@ namespace WPFPresntationLayer
                             tcManager.Visibility = Visibility.Hidden;
                             tcResption.Visibility = Visibility.Visible;
                         }
-                    }                    
+                    }
                 }
                 else
                 {
@@ -90,7 +91,7 @@ namespace WPFPresntationLayer
 
         private bool validatPassword(string password)
         {
-           Boolean result = true;
+            Boolean result = true;
             if (String.IsNullOrEmpty(password))
             {
                 result = false;
@@ -103,14 +104,14 @@ namespace WPFPresntationLayer
             Boolean result = false;
             if (userName != null)
             {
-              result = true;
+                result = true;
             }
             return result;
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-           bool isFormValid = validateForm();
+            bool isFormValid = validateForm();
             if (!isFormValid) { return; }
             EmployeeVM employee = new EmployeeVM();
             employee.GivenName = txtGivenName.Text;
@@ -122,19 +123,39 @@ namespace WPFPresntationLayer
             employee.Roles = new List<string>();
             employee.Roles.Add("Reciption");
             int employeeId = 0;
-            employeeId = _employeeManger.addNewEmployee(employee);
-            if (employeeId == 0)
+            if (btnSubmit.Content.ToString() == "New")
             {
-                lblAdminMessages.Content = "new Employee did not save";
+                employeeId = _employeeManger.addNewEmployee(employee);
+
+                if (employeeId == 0)
+                {
+                    lblAdminMessages.Content = "new Employee did not save";
+                    return;
+                }
+                lblAdminMessages.Content = "new Employee added correctly";
+
             }
             else
             {
-                clearFormData();
-                lblAdminMessages.Content = "new employee added correctly";
-                _employees = new List<Employee>();
-                _employees = _employeeManger.GetAllEmployees();
-                dgAllEmployee.ItemsSource = _employees;
+                employee.EmployeeID = oldEmployee.EmployeeID;
+                int result = _employeeManger.EditEmployee(employee);
+                if (result != 0)
+                {
+                    lblAdminMessages.Content = "update done correctly";
+                    btnSubmit.Content = "New";
+                }
+                else
+                {
+                    lblAdminMessages.Content = "there is and error, try again";
+                    return;
+                }
             }
+
+            clearFormData();
+            _employees = new List<Employee>();
+            _employees = _employeeManger.GetAllEmployees();
+            dgAllEmployee.ItemsSource = _employees;
+
         }
 
         private void clearFormData()
@@ -144,7 +165,7 @@ namespace WPFPresntationLayer
             txtPhone.Text = "";
             txtEmail.Text = "";
             txtPassword.Text = "";
-            //cbActive. = false;
+            cbActive.IsChecked = false;
         }
 
         private bool validateForm()
@@ -154,7 +175,8 @@ namespace WPFPresntationLayer
                 lblAdminMessages.Content = "Given Name Require";
                 return false;
             }
-            if (txtFamilyName.Text.Length == 0) {
+            if (txtFamilyName.Text.Length == 0)
+            {
                 lblAdminMessages.Content = "Family Name Require";
                 return false;
             }
@@ -166,20 +188,20 @@ namespace WPFPresntationLayer
             if (txtEmail.Text.Length == 0)
             {
                 lblAdminMessages.Content = "Email Require";
-                return false;   
+                return false;
             }
             if (txtPassword.Text.Length == 0)
             {
                 lblAdminMessages.Content = "Password Require";
                 return false;
             }
-                lblAdminMessages.Content = "";
+            lblAdminMessages.Content = "";
             return true;
         }
 
         private void btnDeleteEmployee_Click(object sender, RoutedEventArgs e)
         {
-             Employee employee = (Employee)dgAllEmployee.SelectedItem;
+            Employee employee = (Employee)dgAllEmployee.SelectedItem;
             if (employee != null)
             {
                 int result = _employeeManger.deleteEmployee(employee);
@@ -195,13 +217,26 @@ namespace WPFPresntationLayer
             }
             else
             {
-                lblAdminMessages.Content = "Please select an employee";
+                lblAdminMessages.Content = "Please select an oldEmployee";
                 return;
             }
-                
-           
-                
-           
+
+
+
+
+        }
+
+        private void dgAllEmployee_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+            oldEmployee = (Employee)dgAllEmployee.SelectedItem;
+            txtGivenName.Text = oldEmployee.GivenName;
+            txtFamilyName.Text = oldEmployee.FamilyName;
+            txtEmail.Text = oldEmployee.Email;
+            txtPassword.Text = oldEmployee.Password;
+            txtPhone.Text = oldEmployee.Phone;
+            cbActive.IsChecked = oldEmployee.Active;
+            btnSubmit.Content = "Update";
         }
     }
 }

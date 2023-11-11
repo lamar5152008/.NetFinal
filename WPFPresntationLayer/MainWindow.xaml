@@ -16,7 +16,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition/>
-                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="600" />
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0"></Grid>
             <Grid Grid.Column="1"></Grid>
@@ -30,12 +30,20 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="65"/>
                         <ColumnDefinition Width="190"/>
+                        <ColumnDefinition Width="65"/>
+                        <ColumnDefinition Width="190"/>
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Column="0">
                         <Label x:Name="lbl_username" Content="username"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <TextBox x:Name="txt_username" TextWrapping="Wrap"/>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <Label x:Name="lbl_password" Content="password"/>
+                    </Grid>
+                    <Grid Grid.Column="3">
+                        <PasswordBox x:Name="txt_password" Grid.ColumnSpan="3" />
                     </Grid>
                 </Grid>
                 <Grid Grid.Row="1">
@@ -44,7 +52,7 @@
                         <ColumnDefinition Width="190"/>
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Column="0">
-                        <Label x:Name="lbl_password" Content="password"/>
+                       
                     </Grid>
                     <Grid Grid.Column="1">
                         <Grid.ColumnDefinitions>
@@ -52,7 +60,7 @@
                             <ColumnDefinition Width="15*"/>
                             <ColumnDefinition Width="61*"/>
                         </Grid.ColumnDefinitions>
-                        <PasswordBox x:Name="txt_password" Grid.ColumnSpan="3" />
+                        
                     </Grid>
                 </Grid>
                 <Grid Grid.Row="2">
@@ -83,7 +91,7 @@
 
                     </Grid>
                     <Grid Grid.Row="1">
-                        <DataGrid x:Name="dgAllEmployee" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True"/>
+                        <DataGrid x:Name="dgAllEmployee" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" MouseDoubleClick="dgAllEmployee_MouseDoubleClick"/>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.RowDefinitions>
@@ -149,7 +157,7 @@
                                 <CheckBox x:Name="cbActive"/>
                             </Grid>
                             <Grid Grid.Column="6">
-                                <Button x:Name="btnSubmit" Content="new" Click="btnSubmit_Click"/>
+                                <Button x:Name="btnSubmit" Content="New" Click="btnSubmit_Click"/>
                             </Grid>
                         </Grid>
                     </Grid>

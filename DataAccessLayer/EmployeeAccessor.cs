@@ -135,6 +135,34 @@ namespace DataAccessLayer
             return employees;
         }
 
+        public int updateEmployee(EmployeeVM employee)
+        {
+            int result = 0;
+            SqlConnection conn = DataBasesConnection.createMSSqlConnection();
+            var cmd = new SqlCommand("sp_update_employee", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@EmployeeID", employee.EmployeeID);
+            cmd.Parameters.AddWithValue("@GivenName", employee.GivenName);
+            cmd.Parameters.AddWithValue("@FamilyName", employee.FamilyName);
+            cmd.Parameters.AddWithValue("@Phone", employee.Phone);
+            cmd.Parameters.AddWithValue("@Email", employee.Email);
+            cmd.Parameters.AddWithValue("@Password", employee.Password);
+            cmd.Parameters.AddWithValue("@Active", employee.Active);
+            cmd.Parameters.AddWithValue("@Role", employee.Roles[0]);
+            try
+            {
+                conn.Open();
+                result = cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return result;
+        }
+
         public int verfiyUser(string userName, string password)
         {
             int result = 0;

@@ -39,6 +39,14 @@ namespace LogicLayer
             return result;
         }
 
+        public int EditEmployee(EmployeeVM employee)
+        {
+            int result = 0;
+            employee.Password = hashSHA256(employee.Password);
+            result = _employeeAccessor.updateEmployee(employee);
+            return result;
+        }
+
         public List<Employee> GetAllEmployees()
         {
             _employees = _employeeAccessor.selectAllEmployees();

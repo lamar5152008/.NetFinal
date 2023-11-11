@@ -13,6 +13,7 @@ namespace DataAccessInerface
         List<string> getEmployeeRoles(int employeeID);
         int insertNewEmployee(EmployeeVM employee);
         List<Employee> selectAllEmployees();
+        int updateEmployee(EmployeeVM employee);
         int verfiyUser(string userName, string password);
     }
 }
