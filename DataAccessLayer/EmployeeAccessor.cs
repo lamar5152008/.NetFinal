@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccessInerface;
+using DataAccessInterface;
 using DataObject;
 
 namespace DataAccessLayer

@@ -91,6 +91,33 @@ INSERT INTO [dbo].[EmployeeRole]
 			 (100002, 'Reciption')
 GO			 
 
+
+/* Car Table */
+print '' print '*** creating Car table ***'
+GO
+CREATE TABLE [dbo].[Cars] (
+    	[CarID]       [int]  IDENTITY(100000, 1)  NOT NULL,
+	[Name]        [nvarchar] (50)             NOT NULL,
+	[Model]       [nvarchar] (50)             NOT NULL,
+	[Color]       [nvarchar] (50)             NOT NULL,
+	[Year]        [nvarchar] (50)             NOT NULL,
+	[Active] [bit]                         NOT NULL DEFAULT 1,
+	CONSTRAINT   [pk_CarID] PRIMARY KEY ([CarID])
+)
+GO
+print '' print '*** inserting Car test records ***'
+GO
+INSERT INTO [dbo].[Cars]
+         ([Name], [Model], [Color], [Year])
+		 VALUES
+		     ('Camry', 'Toyota','white','2023'),
+			 ('Corrella', 'Toyota','Silver','2020'),
+			 ('Tucosn', 'kia','brown','2022')
+GO
+
+
+
+
 print '' print '*** creating sp_verify_user ***'
 GO
 CREATE PROCEDURE [dbo].[sp_verify_user]
@@ -191,6 +218,14 @@ AS
      END
 GO	
 
-
+print '' print '*** creating sp_select_all_cars ***'
+GO
+CREATE PROCEDURE [dbo].[sp_select_all_cars]
+AS    
+	BEGIN
+		SELECT [CarID],[Name], [Model], [Color], [Year], [Active]
+		FROM [dbo].[Cars]		  
+	END
+GO
 
 

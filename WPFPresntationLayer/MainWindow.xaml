@@ -176,11 +176,20 @@
                         <Grid Grid.Column="2"></Grid>
                     </Grid>
                 </Grid>
-
-
             </TabControl>
             <TabControl x:Name="tcManager">
-                <Label x:Name="lblManager" Content="Manager"></Label>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="1">
+                        <DataGrid x:Name="dgCars"/>
+                    </Grid>
+                </Grid>
             </TabControl>
 
             <TabControl x:Name="tcResption">

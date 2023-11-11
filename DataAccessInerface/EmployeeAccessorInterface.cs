@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessInerface
+namespace DataAccessInterface
 {
     public interface EmployeeAccessorInterface
     {

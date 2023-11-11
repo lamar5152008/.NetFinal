@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LogicLayerInerface;
+using LogicLayerInterface;
 using DataAccessLayer;
-using DataAccessInerface;
+using DataAccessInterface;
 using System.Security.Cryptography;
 using DataObject;
 

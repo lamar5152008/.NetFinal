@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LogicLayer;
-using LogicLayerInerface;
+using LogicLayerInterface;
 using DataObject;
 
 namespace WPFPresntationLayer
@@ -26,7 +26,8 @@ namespace WPFPresntationLayer
     {
         private EmployeeMangerInterface _employeeManger;
         private List<Employee> _employees;
-        Employee oldEmployee = new Employee();
+        private Employee oldEmployee = new Employee();
+        private CarManagerInterface carManager;
         public MainWindow()
         {
             InitializeComponent();
@@ -37,6 +38,7 @@ namespace WPFPresntationLayer
             _employees = new List<Employee>();
             _employees = _employeeManger.GetAllEmployees();
             dgAllEmployee.ItemsSource = _employees;
+            carManager = new CarManager();
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -68,6 +70,9 @@ namespace WPFPresntationLayer
                             tcAdmin.Visibility = Visibility.Hidden;
                             tcManager.Visibility = Visibility.Visible;
                             tcResption.Visibility = Visibility.Hidden;
+                            List<Car> cars = new List<Car>();
+                            cars = carManager.getAllCars();
+                            dgCars.ItemsSource = cars;
                         }
                         if (role == "Reciption")
                         {

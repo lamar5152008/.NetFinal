@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LogicLayerInerface
+namespace LogicLayerInterface
 {
     public interface EmployeeMangerInterface
     {
