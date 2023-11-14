@@ -187,7 +187,64 @@
                         <RowDefinition Height="40"/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="1">
-                        <DataGrid x:Name="dgCars"/>
+                        <DataGrid x:Name="dgCars" IsReadOnly="True" CanUserDeleteRows="False" CanUserAddRows="False"/>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Label x:Name="lblCarFromError" Foreground="red"/>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Label Content="Name" x:Name="lblNameCar"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Label Content="Model" x:Name="lblModelCar"/>
+                        </Grid>
+                        <Grid Grid.Column="2">
+                            <Label Content="Color" x:Name="lblColorCar"/>
+                        </Grid>
+                        <Grid Grid.Column="3">
+                            <Label Content="Year" x:Name="lblYearCar"/>
+                        </Grid>
+                        <Grid Grid.Column="4">
+                            <Label Content="Active" x:Name="lblActiveCar"/>
+                        </Grid>
+                        <Grid Grid.Column="5"></Grid>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <TextBox x:Name="txtNameCar"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <TextBox x:Name="txtModelCar"/>
+                        </Grid>
+                        <Grid Grid.Column="2">
+                            <TextBox x:Name="txtColorCar"/>
+                        </Grid>
+                        <Grid Grid.Column="3">
+                            <TextBox x:Name="txtYearCar"/>
+                        </Grid>
+                        <Grid Grid.Column="4">
+                            <CheckBox x:Name="cbActiveCar" IsChecked="True"/>
+                        </Grid>
+                        <Grid Grid.Column="5">
+                            <Button x:Name="btnSubmitCar" Content="Submit" Click="btnSubmitCar_Click"/>
+                        </Grid>
                     </Grid>
                 </Grid>
             </TabControl>

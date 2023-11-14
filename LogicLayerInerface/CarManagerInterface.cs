@@ -9,6 +9,7 @@ namespace LogicLayerInterface
 {
     public interface CarManagerInterface
     {
-        List<Car> getAllCars();
+        public int add(Car car);
+        public List<Car> getAllCars();
     }
 }

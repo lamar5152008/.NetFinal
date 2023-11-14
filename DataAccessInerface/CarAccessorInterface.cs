@@ -9,6 +9,7 @@ namespace DataAccessInterface
 {
     public interface CarAccessorInterface
     {
-        List<Car> selectCars();
+        public int insert(Car car);
+        public List<Car> selectCars();
     }
 }

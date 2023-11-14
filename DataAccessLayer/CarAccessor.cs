@@ -12,6 +12,31 @@ namespace DataAccessLayer
 {
     public class CarAccessor : CarAccessorInterface
     {
+        public int insert(Car car)
+        {
+            int result = 0;
+            SqlConnection conn = DataBasesConnection.createMSSqlConnection();
+            var cmd = new SqlCommand("sp_insertCar", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Name", car.Name);
+            cmd.Parameters.AddWithValue("@Model", car.Model);
+            cmd.Parameters.AddWithValue("@Color", car.Color);
+            cmd.Parameters.AddWithValue("@Year", car.Year);
+            cmd.Parameters.AddWithValue("@Active", car.Active);
+            try
+            {
+                conn.Open();
+                result = cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return result;
+        }
+
         public List<Car> selectCars()
         {
             List<Car> cars = new List<Car>();

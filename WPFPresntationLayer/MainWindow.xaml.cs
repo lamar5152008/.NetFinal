@@ -36,8 +36,6 @@ namespace WPFPresntationLayer
             tcManager.Visibility = Visibility.Hidden;
             tcResption.Visibility = Visibility.Hidden;
             _employees = new List<Employee>();
-            _employees = _employeeManger.GetAllEmployees();
-            dgAllEmployee.ItemsSource = _employees;
             carManager = new CarManager();
         }
 
@@ -64,6 +62,8 @@ namespace WPFPresntationLayer
                             tcAdmin.Visibility = Visibility.Visible;
                             tcManager.Visibility = Visibility.Hidden;
                             tcResption.Visibility = Visibility.Hidden;
+                            _employees = _employeeManger.GetAllEmployees();
+                            dgAllEmployee.ItemsSource = _employees;
                         }
                         if (role == "Manager")
                         {
@@ -242,6 +242,74 @@ namespace WPFPresntationLayer
             txtPhone.Text = oldEmployee.Phone;
             cbActive.IsChecked = oldEmployee.Active;
             btnSubmit.Content = "Update";
+        }
+
+        private void btnSubmitCar_Click(object sender, RoutedEventArgs e)
+        {
+            if (!validateCarForm())
+            {
+                return;
+            }
+            Car car = new Car();
+            car.Name = txtNameCar.Text;
+            car.Model = txtModelCar.Text;
+            car.Color = txtColorCar.Text;
+            car.Year = txtYearCar.Text;
+            car.Active = cbActiveCar.IsChecked == true;
+            int result = carManager.add(car);
+            if (result == 0)
+            {
+                lblCarFromError.Content = "there is an error, please contact admin";
+            }
+            else
+            {
+                lblCarFromError.Foreground = Brushes.Black;
+                lblCarFromError.Content = "car data added correctly";
+                clearCarForm();
+                List<Car> cars = new List<Car>();
+                cars = carManager.getAllCars();
+                dgCars.ItemsSource = cars;
+            }
+        }
+
+        private void clearCarForm()
+        {
+            txtNameCar.Text = "";
+            txtModelCar.Text = "";
+            txtColorCar.Text = "";
+            txtYearCar.Text = "";
+            cbActive.IsChecked = true;
+        }
+
+        private bool validateCarForm()
+        {
+            if (txtNameCar.Text.Length == 0)
+            {
+                lblCarFromError.Content = "Name of car is require";
+                txtNameCar.Focus();
+                return false;
+            }
+            if (txtModelCar.Text.Length == 0)
+            {
+                lblCarFromError.Content = "Model of car is require";
+                txtModelCar.Focus();
+                return false;
+            }
+            if (txtColorCar.Text.Length == 0)
+            {
+                lblCarFromError.Content = "Color of car is require";
+                txtColorCar.Focus();
+                return false;
+            }
+            if (txtYearCar.Text.Length == 0)
+            {
+                lblCarFromError.Content = "Year of car is require";
+                txtYearCar.Focus();
+                return false;
+            }
+            lblCarFromError.Content = "";
+            btnSubmitCar.Focus();
+            return true;
         }
     }
 }

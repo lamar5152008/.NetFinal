@@ -1,0 +1,12 @@
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\bin\Debug\net6.0\DataAccessFake.deps.json
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\bin\Debug\net6.0\DataAccessFake.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\bin\Debug\net6.0\DataAccessFake.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\DataAccessFake.GeneratedMSBuildEditorConfig.editorconfig
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\DataAccessFake.AssemblyInfoInputs.cache
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\DataAccessFake.AssemblyInfo.cs
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\DataAccessFake.csproj.CoreCompileInputs.cache
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\DataAccessFake.sourcelink.json
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\DataAccessFake.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\refint\DataAccessFake.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\DataAccessFake.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\ref\DataAccessFake.dll

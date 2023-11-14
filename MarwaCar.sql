@@ -227,5 +227,15 @@ AS
 		FROM [dbo].[Cars]		  
 	END
 GO
+print '' print '*** creating sp_insertCar ***'
+GO
+CREATE PROCEDURE [dbo].[sp_insertCar]
+(@Name NVARCHAR(50), @Model NVARCHAR(50), @Color NVARCHAR(50), @Year NVARCHAR(50), @Active NVARCHAR(50))
+AS    
+ BEGIN
+		INSERT INTO [dbo].[Cars]
+		([Name],[Model],[Color],[Year],[Active])
+		VALUES (@Name,@Model,@Color,@Year,@Active);
 
+ END
 
