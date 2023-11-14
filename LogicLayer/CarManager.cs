@@ -21,6 +21,13 @@ namespace LogicLayer
             return result;
         }
 
+        public int edit(Car car)
+        {
+            int result = 0;
+            result = carAccessor.update(car);
+            return result;
+        }
+
         public List<Car> getAllCars()
         {
             List<Car> cars = new List<Car>();

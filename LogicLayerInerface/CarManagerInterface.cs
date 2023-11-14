@@ -10,6 +10,7 @@ namespace LogicLayerInterface
     public interface CarManagerInterface
     {
         public int add(Car car);
+        public int edit(Car car);
         public List<Car> getAllCars();
     }
 }

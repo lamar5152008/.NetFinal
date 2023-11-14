@@ -71,5 +71,31 @@ namespace DataAccessLayer
             finally { conn.Close(); }
             return cars;
         }
+
+        public int update(Car car)
+        {
+            int result = 0;
+            SqlConnection conn = DataBasesConnection.createMSSqlConnection();
+            var cmd = new SqlCommand("sp_update_car", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CarID", car.CarID);
+            cmd.Parameters.AddWithValue("@Name", car.Name);
+            cmd.Parameters.AddWithValue("@Model", car.Model);
+            cmd.Parameters.AddWithValue("@Color", car.Color);
+            cmd.Parameters.AddWithValue("@Year", car.Year);
+            cmd.Parameters.AddWithValue("@Active", car.Active);
+            try
+            {
+                conn.Open();
+                result = cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return result;
+        }
     }
 }

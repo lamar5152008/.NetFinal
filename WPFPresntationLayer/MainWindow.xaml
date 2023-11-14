@@ -187,7 +187,7 @@
                         <RowDefinition Height="40"/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="1">
-                        <DataGrid x:Name="dgCars" IsReadOnly="True" CanUserDeleteRows="False" CanUserAddRows="False"/>
+                        <DataGrid x:Name="dgCars" IsReadOnly="True" CanUserDeleteRows="False" CanUserAddRows="False" MouseDoubleClick="dgCars_MouseDoubleClick"/>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Label x:Name="lblCarFromError" Foreground="red"/>

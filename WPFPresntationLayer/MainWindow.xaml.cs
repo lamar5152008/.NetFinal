@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using LogicLayer;
 using LogicLayerInterface;
 using DataObject;
+using System.Security.AccessControl;
 
 namespace WPFPresntationLayer
 {
@@ -28,6 +29,8 @@ namespace WPFPresntationLayer
         private List<Employee> _employees;
         private Employee oldEmployee = new Employee();
         private CarManagerInterface carManager;
+        private bool editCar = false;
+        private Car oldCar = new Car();
         public MainWindow()
         {
             InitializeComponent();
@@ -256,7 +259,17 @@ namespace WPFPresntationLayer
             car.Color = txtColorCar.Text;
             car.Year = txtYearCar.Text;
             car.Active = cbActiveCar.IsChecked == true;
-            int result = carManager.add(car);
+            int result = 0;
+            if (editCar)
+            {
+                car.CarID = oldCar.CarID;
+                result = carManager.edit(car);
+            }
+            else
+            {
+                result = carManager.add(car);
+                editCar = false;
+            }
             if (result == 0)
             {
                 lblCarFromError.Content = "there is an error, please contact admin";
@@ -310,6 +323,17 @@ namespace WPFPresntationLayer
             lblCarFromError.Content = "";
             btnSubmitCar.Focus();
             return true;
+        }
+
+        private void dgCars_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            oldCar = (Car) dgCars.SelectedItem;
+            txtNameCar.Text = oldCar.Name;
+            txtModelCar.Text = oldCar.Model;
+            txtColorCar.Text = oldCar.Color;
+            txtYearCar.Text = oldCar.Year;
+            cbActive.IsChecked = oldCar.Active;
+            editCar = true;
         }
     }
 }

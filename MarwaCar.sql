@@ -238,4 +238,20 @@ AS
 		VALUES (@Name,@Model,@Color,@Year,@Active);
 
  END
+GO
+print '' print '*** creating sp_update_car ***'
+GO
+CREATE PROCEDURE [dbo].[sp_update_car]
+(@CarID INT, @Name NVARCHAR(50), @Model NVARCHAR(50), @Color NVARCHAR(50), @Year NVARCHAR(50), @Active NVARCHAR(50))
 
+AS    
+      BEGIN
+	 UPDATE [dbo].[Cars]
+	 SET	[Name] = @Name,
+		[Model]=@Model,
+		[Color] = @Color,
+		[Year] = @Year,
+		[Active] = @Active
+	 WHERE CarID = @CarID;	  
+     END
+GO	

@@ -11,5 +11,6 @@ namespace DataAccessInterface
     {
         public int insert(Car car);
         public List<Car> selectCars();
+        public int update(Car car);
     }
 }
