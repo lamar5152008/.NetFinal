@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\WPFPresntationLayer\App.xaml
-11407045341
+2-1509111317
 
-51478298590
+6-1743661085
 200-1795751899
-MainWindow.xaml;
+FrmCustomer.xaml;MainWindow.xaml;
 
-False
+True
 

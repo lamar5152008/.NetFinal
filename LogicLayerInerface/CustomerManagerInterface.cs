@@ -9,6 +9,7 @@ namespace LogicLayerInterface
 {
     public interface CustomerManagerInterface
     {
+        public int addCustomer(Customer customer);
         public List<Customer> getAllCustomers();
     }
 }

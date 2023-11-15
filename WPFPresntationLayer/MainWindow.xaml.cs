@@ -342,5 +342,14 @@ namespace WPFPresntationLayer
             cbActive.IsChecked = oldCar.Active;
             editCar = true;
         }
+
+        private void btnAddCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            FrmCustomer frmCustomer = new FrmCustomer();
+            frmCustomer.ShowDialog();
+            List<Customer> customers = new List<Customer>();
+            customers = customerManager.getAllCustomers();
+            dataGridReciption.ItemsSource = customers;
+        }
     }
 }

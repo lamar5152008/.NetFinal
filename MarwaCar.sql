@@ -262,9 +262,9 @@ CREATE PROCEDURE [dbo].[sp_insertCar]
 AS    
  BEGIN
 		INSERT INTO [dbo].[Cars]
-		([Name],[Model],[Color],[Year],[Active])
+			([Name],[Model],[Color],[Year],[Active])
 		VALUES (@Name,@Model,@Color,@Year,@Active);
-
+		Return @@ROWCOUNT
  END
 GO
 print '' print '*** creating sp_update_car ***'
@@ -291,4 +291,16 @@ AS
 		SELECT [CustomerID],[FirstName], [LastName], [Email], [PhoneNumber]
 		FROM [dbo].[Customers]		  
 	END
+GO
+print '' print '*** creating sp_insert_customer ***'
+GO
+CREATE PROCEDURE [dbo].[sp_insert_customer]
+(@FirstName NVARCHAR(50), @LastName NVARCHAR(50), @Email NVARCHAR(50), @Phone NVARCHAR(50))
+AS    
+ BEGIN
+		INSERT INTO [dbo].[Customers]
+			([FirstName], [LastName], [Email], [PhoneNumber])
+		VALUES (@FirstName,@LastName,@Email,@Phone);
+		Return @@ROWCOUNT
+ END
 GO

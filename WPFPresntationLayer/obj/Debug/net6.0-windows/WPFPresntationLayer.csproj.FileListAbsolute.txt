@@ -75,3 +75,5 @@ D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\WPFPresntationLayer\obj\D
 D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\WPFPresntationLayer\obj\Debug\net6.0-windows\WPFPresntationLayer.pdb
 D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\WPFPresntationLayer\obj\Debug\net6.0-windows\WPFPresntationLayer.genruntimeconfig.cache
 D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\WPFPresntationLayer\obj\Debug\net6.0-windows\ref\WPFPresntationLayer.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\WPFPresntationLayer\obj\Debug\net6.0-windows\FrmCustomer.g.cs
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\WPFPresntationLayer\obj\Debug\net6.0-windows\FrmCustomer.baml

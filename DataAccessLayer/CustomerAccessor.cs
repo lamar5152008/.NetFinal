@@ -11,6 +11,30 @@ namespace DataAccessLayer
 {
     public class CustomerAccessor : CustomerAccessorInterface
     {
+        public int insertCustomer(Customer customer)
+        {
+            int result = 0;
+            SqlConnection conn = DataBasesConnection.createMSSqlConnection();
+            var cmd = new SqlCommand("sp_insert_customer", conn);
+            cmd.Parameters.AddWithValue("@FirstName", customer.FirstName);
+            cmd.Parameters.AddWithValue("@LastName", customer.LastName);
+            cmd.Parameters.AddWithValue("@Email", customer.Email);
+            cmd.Parameters.AddWithValue("@Phone", customer.Phone);
+            try
+            {
+                conn.Open();
+                result = cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return result;
+        }
+
         public List<Customer> selectCustomers()
         {
            List<Customer> customers = new List<Customer>();

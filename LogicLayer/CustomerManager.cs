@@ -13,6 +13,14 @@ namespace LogicLayer
     public class CustomerManager : CustomerManagerInterface
     {
         private CustomerAccessorInterface customerAccessor = new CustomerAccessor();
+
+        public int addCustomer(Customer customer)
+        {
+            int result = 0;
+            result = customerAccessor.insertCustomer(customer);
+            return result;
+        }
+
         public List<Customer> getAllCustomers()
         {
             List<Customer> customers = new List<Customer>();

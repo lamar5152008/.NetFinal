@@ -9,6 +9,7 @@ namespace DataAccessInterface
 {
     public interface CustomerAccessorInterface
     {
+        public int insertCustomer(Customer customer);
         List<Customer> selectCustomers();
     }
 }
