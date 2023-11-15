@@ -250,7 +250,31 @@
             </TabControl>
 
             <TabControl x:Name="tcResption">
-                <Label x:Name="lblResption" Content="Resption"></Label>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" x:Name="GridReciptionHeader">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0"></Grid>
+                        <Grid Grid.Column="1"></Grid>
+                        <Grid Grid.Column="2"></Grid>
+                        <Grid Grid.Column="3"></Grid>
+                    </Grid>
+                    <Grid Grid.Row="1" x:Name="GridReciptionMain">
+                        <DataGrid x:Name="dataGridReciption" IsReadOnly="True" CanUserDeleteRows="False" CanUserAddRows="False"/>
+                    </Grid>
+                    <Grid Grid.Row="2" x:Name="GridReciptionFooter">
+                        <Label x:Name="lblResptionGeneralNote"/>
+                    </Grid>
+                </Grid>
             </TabControl>
 
 

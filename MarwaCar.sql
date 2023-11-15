@@ -117,7 +117,35 @@ GO
 
 
 
+/*Customer */
+print '' print '*** creating Customers table ***'
+GO
+CREATE TABLE [dbo].[Customers] (
+    	[CustomerID]       [int]  IDENTITY(100000, 1)  NOT NULL,
+	[FirstName]        [nvarchar] (50)             NOT NULL,
+	[LastName]       [nvarchar] (50)             NOT NULL,
+	[Email]       [nvarchar] (50)             NOT NULL,
+	[PhoneNumber]        [nvarchar] (50)             NOT NULL,
+	CONSTRAINT   [pk_CustomerID] PRIMARY KEY ([CustomerID])
+)
+GO
+print '' print '*** inserting Customers test records ***'
+GO
+INSERT INTO [dbo].[Customers]
+         ([FirstName], [LastName], [Email], [PhoneNumber])
+		 VALUES
+		     ('John', 'Kennedy','John@Gmail.com','123456789'),
+			 ('Ali', 'Mohamed','Ali@Gmail.com','3192134432'),
+			 ('Maria', 'Jackson','Maria67@Gmail.com','7023456578')
+GO
 
+
+
+
+
+
+
+GO
 print '' print '*** creating sp_verify_user ***'
 GO
 CREATE PROCEDURE [dbo].[sp_verify_user]
@@ -255,3 +283,12 @@ AS
 	 WHERE CarID = @CarID;	  
      END
 GO	
+print '' print '*** creating sp_select_customers ***'
+GO
+CREATE PROCEDURE [dbo].[sp_select_customers]
+AS    
+	BEGIN
+		SELECT [CustomerID],[FirstName], [LastName], [Email], [PhoneNumber]
+		FROM [dbo].[Customers]		  
+	END
+GO

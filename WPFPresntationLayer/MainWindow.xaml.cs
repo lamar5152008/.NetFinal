@@ -31,6 +31,8 @@ namespace WPFPresntationLayer
         private CarManagerInterface carManager;
         private bool editCar = false;
         private Car oldCar = new Car();
+        private CustomerManagerInterface customerManager;
+        private Customer customer;
         public MainWindow()
         {
             InitializeComponent();
@@ -40,6 +42,8 @@ namespace WPFPresntationLayer
             tcResption.Visibility = Visibility.Hidden;
             _employees = new List<Employee>();
             carManager = new CarManager();
+            customerManager = new CustomerManager();
+            customer = new Customer();
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -82,6 +86,9 @@ namespace WPFPresntationLayer
                             tcAdmin.Visibility = Visibility.Hidden;
                             tcManager.Visibility = Visibility.Hidden;
                             tcResption.Visibility = Visibility.Visible;
+                            List<Customer> customers = new List<Customer>();
+                            customers = customerManager.getAllCustomers();
+                            dataGridReciption.ItemsSource = customers;
                         }
                     }
                 }
