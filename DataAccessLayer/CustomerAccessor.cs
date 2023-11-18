@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,7 @@ namespace DataAccessLayer
             int result = 0;
             SqlConnection conn = DataBasesConnection.createMSSqlConnection();
             var cmd = new SqlCommand("sp_insert_customer", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@FirstName", customer.FirstName);
             cmd.Parameters.AddWithValue("@LastName", customer.LastName);
             cmd.Parameters.AddWithValue("@Email", customer.Email);
@@ -40,6 +42,7 @@ namespace DataAccessLayer
            List<Customer> customers = new List<Customer>();
             SqlConnection conn = DataBasesConnection.createMSSqlConnection();
             var cmd = new SqlCommand("sp_select_customers", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             try
             {
                 conn.Open();

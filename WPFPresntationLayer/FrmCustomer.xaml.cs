@@ -43,6 +43,7 @@ namespace WPFPresntationLayer
             customer.Phone = txtPhone.Text;
             result = customerManager.addCustomer(customer);
             if (result == 0) { lblGeneralMessage.Content = "did not goes right!"; return; }
+            lblGeneralMessage.Content = "user added correctly";
         }
 
         private bool validForm()
