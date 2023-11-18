@@ -28,6 +28,23 @@ namespace WPFPresntationLayer
         {
             InitializeComponent();
             customer = new Customer();
+            btnSubmit.Content = "Submit";
+        }
+
+        public FrmCustomer(Customer customer)
+        {
+            this.customer = customer;
+            InitializeComponent();
+            insertFormData();
+            btnSubmit.Content = "Update";
+        }
+
+        private void insertFormData()
+        {
+            txtFirstName.Text = customer.FirstName;
+            txtLastname.Text = customer.LastName;
+            txtPhone.Text = customer.Phone;
+            txtEmail.Text = customer.Email; 
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -41,7 +58,16 @@ namespace WPFPresntationLayer
             customer.LastName = txtLastname.Text;
             customer.Email = txtEmail.Text;
             customer.Phone = txtPhone.Text;
-            result = customerManager.addCustomer(customer);
+            if (btnSubmit.Content.ToString() == "Submit")
+            {
+                result = customerManager.addCustomer(customer);
+            }
+            else
+            {
+
+                result = customerManager.edit(customer);
+            }
+            
             if (result == 0) { lblGeneralMessage.Content = "did not goes right!"; return; }
             lblGeneralMessage.Content = "user added correctly";
         }

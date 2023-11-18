@@ -351,5 +351,43 @@ namespace WPFPresntationLayer
             customers = customerManager.getAllCustomers();
             dataGridReciption.ItemsSource = customers;
         }
+
+        private void dataGridReciption_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (dataGridReciption.SelectedItem == null)
+            {
+                lblResptionGeneralNote.Content = "please chose a customer first";
+                return;
+            }
+            Customer customer = new Customer();
+            customer = (Customer) dataGridReciption.SelectedItem;
+            FrmCustomer customerForm = new FrmCustomer(customer);
+            customerForm.ShowDialog();
+            List<Customer> customers = new List<Customer>();
+            customers = customerManager.getAllCustomers();
+            dataGridReciption.ItemsSource = customers;
+        }
+
+        private void btnDeleteCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            if (dataGridReciption.SelectedItem == null)
+            {
+                lblResptionGeneralNote.Content = "Please choose arow";
+                return;
+            }
+            Customer customer = new Customer();
+            customer = (Customer ) dataGridReciption.SelectedItem;
+            int result = 0;
+            result = customerManager.deleteCustomer(customer);
+            if (result ==0)
+            {
+                lblResptionGeneralNote.Content = "customer did not deleted!";
+                return;
+            }
+            lblResptionGeneralNote.Content = "";
+            List<Customer> customers = new List<Customer>();
+            customers = customerManager.getAllCustomers();
+            dataGridReciption.ItemsSource = customers;
+        }
     }
 }

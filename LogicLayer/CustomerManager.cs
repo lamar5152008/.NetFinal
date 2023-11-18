@@ -21,6 +21,20 @@ namespace LogicLayer
             return result;
         }
 
+        public int deleteCustomer(Customer customer)
+        {
+            int result = 0;
+            result = customerAccessor.deleteCustomer(customer);
+            return result;
+        }
+
+        public int edit(Customer customer)
+        {
+            int result = 0;
+            result = customerAccessor.updateCustomer(customer);
+            return result;
+        }
+
         public List<Customer> getAllCustomers()
         {
             List<Customer> customers = new List<Customer>();

@@ -126,6 +126,7 @@ CREATE TABLE [dbo].[Customers] (
 	[LastName]       [nvarchar] (50)             NOT NULL,
 	[Email]       [nvarchar] (50)             NOT NULL,
 	[PhoneNumber]        [nvarchar] (50)             NOT NULL,
+	[Active]	bit	default 1,
 	CONSTRAINT   [pk_CustomerID] PRIMARY KEY ([CustomerID])
 )
 GO
@@ -289,7 +290,8 @@ CREATE PROCEDURE [dbo].[sp_select_customers]
 AS    
 	BEGIN
 		SELECT [CustomerID],[FirstName], [LastName], [Email], [PhoneNumber]
-		FROM [dbo].[Customers]		  
+		FROM [dbo].[Customers]	
+		WHERE Active = 1;	  
 	END
 GO
 print '' print '*** creating sp_insert_customer ***'
@@ -301,6 +303,30 @@ AS
 		INSERT INTO [dbo].[Customers]
 			([FirstName], [LastName], [Email], [PhoneNumber])
 		VALUES (@FirstName,@LastName,@Email,@Phone);
+		Return @@ROWCOUNT
+ END
+GO
+print '' print '*** creating sp_update_customer ***'
+GO
+CREATE PROCEDURE [dbo].[sp_update_customer]
+(@CustomerID int,@FirstName NVARCHAR(50), @LastName NVARCHAR(50), @Email NVARCHAR(50), @Phone NVARCHAR(50))
+AS    
+ BEGIN
+		UPDATE [dbo].[Customers]
+		SET [FirstName]= @FirstName, [LastName]= @LastName, [Email]= @Email, [PhoneNumber]= @Phone
+		WHERE  [CustomerID]= @CustomerID;
+		Return @@ROWCOUNT
+ END
+GO
+print '' print '*** creating sp_delete_customer ***'
+GO
+CREATE PROCEDURE [dbo].[sp_delete_customer]
+(@CustomerID int)
+AS    
+ BEGIN
+		UPDATE [dbo].[Customers]
+		SET [Active]= 0
+		WHERE  [CustomerID]= @CustomerID;
 		Return @@ROWCOUNT
  END
 GO

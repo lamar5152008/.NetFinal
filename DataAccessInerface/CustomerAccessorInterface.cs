@@ -9,7 +9,9 @@ namespace DataAccessInterface
 {
     public interface CustomerAccessorInterface
     {
+        public int deleteCustomer(Customer customer);
         public int insertCustomer(Customer customer);
-        List<Customer> selectCustomers();
+        public List<Customer> selectCustomers();
+        public int updateCustomer(Customer customer);
     }
 }

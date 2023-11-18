@@ -12,6 +12,28 @@ namespace DataAccessLayer
 {
     public class CustomerAccessor : CustomerAccessorInterface
     {
+        public int deleteCustomer(Customer customer)
+        {
+            int result = 0;
+            SqlConnection conn = DataBasesConnection.createMSSqlConnection();
+            var cmd = new SqlCommand("sp_delete_customer", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CustomerID", customer.CustomerID);
+            try
+            {
+                conn.Open();
+                result = cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return result;
+        }
+
         public int insertCustomer(Customer customer)
         {
             int result = 0;
@@ -70,6 +92,32 @@ namespace DataAccessLayer
             }
             finally { conn.Close(); }
             return customers;
+        }
+
+        public int updateCustomer(Customer customer)
+        {
+            int result = 0;
+            SqlConnection conn = DataBasesConnection.createMSSqlConnection();
+            var cmd = new SqlCommand("sp_update_customer", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CustomerID", customer.CustomerID);
+            cmd.Parameters.AddWithValue("@FirstName", customer.FirstName);
+            cmd.Parameters.AddWithValue("@LastName", customer.LastName);
+            cmd.Parameters.AddWithValue("@Email", customer.Email);
+            cmd.Parameters.AddWithValue("@Phone", customer.Phone);
+            try
+            {
+                conn.Open();
+                result = cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return result;
         }
     }
 }
