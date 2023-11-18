@@ -272,7 +272,10 @@
                             <Button x:Name="btnDeleteCustomer" Content="Delete Customer"
                                     VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnDeleteCustomer_Click"/>
                         </Grid>
-                        <Grid Grid.Column="2"></Grid>
+                        <Grid Grid.Column="2">
+                            <Button x:Name="btnTransactions" Content="Transaction"
+                                    VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnTransactions_Click"/>
+                        </Grid>
                         <Grid Grid.Column="3"></Grid>
                     </Grid>
                     <Grid Grid.Row="1" x:Name="GridReciptionMain">

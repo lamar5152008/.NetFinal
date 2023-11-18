@@ -1,0 +1,124 @@
+﻿<Window x:Class="WPFPresntationLayer.FRMTransactions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFPresntationLayer"
+        mc:Ignorable="d"
+        Title="FRMTransactions" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Label x:Name="lblTitle" Content="Transaction" FontSize="20" HorizontalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Label x:Name="lblCustomerData" Content="Customer" HorizontalAlignment="Center"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Label x:Name="lblName" HorizontalAlignment="Center"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Label x:Name="lblPhone" HorizontalAlignment="Center"/>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Label x:Name="lblEmail" HorizontalAlignment="Center"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Label x:Name="lblCarData" Content="Car" HorizontalAlignment="Center"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <ComboBox x:Name="comboCar" DropDownClosed="comboCar_DropDownClosed"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Label x:Name="lblCarModel"/>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Label x:Name="lblCarColor"/>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Label x:Name="lblCarYear"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Label x:Name="lblTransactionData" Content="Transaction" HorizontalAlignment="Center"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Label x:Name="lblPrice" Content="Price"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox x:Name="txtPrice"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Label x:Name="lblDate" Content="Date"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox x:Name="txtDate"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Button x:Name="btnSubmit" Content="Submit" Click="btnSubmit_Click"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Label x:Name="lblTransactionNote"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2">
+            <DataGrid x:Name="dataGridTransactions"/>
+        </Grid>
+        <Grid Grid.Row="3"></Grid>
+    </Grid>
+</Window>

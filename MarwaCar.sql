@@ -140,8 +140,28 @@ INSERT INTO [dbo].[Customers]
 			 ('Maria', 'Jackson','Maria67@Gmail.com','7023456578')
 GO
 
-
-
+/*Transaction */
+print '' print '*** creating transactions table ***'
+GO
+CREATE TABLE [dbo].[transactions] (
+    	[transactionID]       [int]  IDENTITY(100000, 1)  NOT NULL,
+	[customerId]        [int]             NOT NULL,
+	[CarId]       [int]             NOT NULL,
+	[Price]       [nvarchar] (50)             NOT NULL,
+	[Date]        [nvarchar] (50)             NOT NULL,
+	CONSTRAINT   [pk_transactionID] PRIMARY KEY ([transactionID]),
+	CONSTRAINT [fk_transactions_customerId] FOREIGN KEY([customerId])
+	    REFERENCES [dbo].[Customers]([CustomerID]),
+	CONSTRAINT [fk_transactions_CarId] FOREIGN KEY([CarId])
+	    REFERENCES [dbo].[Cars]([CarID])
+)
+GO
+print '' print '*** inserting transactions test records ***'
+GO
+INSERT INTO [dbo].[transactions]
+         ([customerId], [CarId], [Price], [Date])
+		 VALUES
+		     (100000, 100000,'3000','11/18/2023')
 
 
 

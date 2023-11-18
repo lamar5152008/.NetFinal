@@ -389,5 +389,18 @@ namespace WPFPresntationLayer
             customers = customerManager.getAllCustomers();
             dataGridReciption.ItemsSource = customers;
         }
+
+        private void btnTransactions_Click(object sender, RoutedEventArgs e)
+        {
+            if (dataGridReciption.SelectedItem == null)
+            {
+                lblResptionGeneralNote.Content = "Please choose a customer first";
+                return;
+            }
+            Customer customer = new Customer();
+            customer = (Customer ) dataGridReciption.SelectedItem;
+            FRMTransactions fRMTransactions = new FRMTransactions(customer);
+            fRMTransactions.ShowDialog();
+        }
     }
 }
