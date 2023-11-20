@@ -350,3 +350,15 @@ AS
 		Return @@ROWCOUNT
  END
 GO
+print '' print '*** creating sp_insert_transaction ***'
+GO
+CREATE PROCEDURE [dbo].[sp_insert_transaction]
+(@CustomerId int, @CarId int, @Price NVARCHAR(50), @Date NVARCHAR(50))
+AS    
+ BEGIN
+		INSERT INTO [dbo].[transactions]
+         	([customerId], [CarId], [Price], [Date])
+		VALUES (@CustomerId,@CarId,@Price,@Date);
+		Return @@ROWCOUNT
+ END
+GO

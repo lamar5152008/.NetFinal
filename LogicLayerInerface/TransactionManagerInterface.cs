@@ -9,5 +9,6 @@ namespace LogicLayerInerface
 {
     public interface TransactionManagerInterface
     {
+        int addTransaction(Transaction transaction);
     }
 }

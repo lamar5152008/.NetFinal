@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DataObject;
 using LogicLayer;
+using LogicLayerInerface;
 using LogicLayerInterface;
 
 namespace WPFPresntationLayer
@@ -27,13 +28,19 @@ namespace WPFPresntationLayer
         private CarManagerInterface carManager;
         private Car car;
         private List<Car> cars;
+        private TransactionManagerInterface transactionManager;
+        private Transaction transaction = null;
+        private List<Transaction> transactions = null;
         public FRMTransactions(Customer customer)
         {
             InitializeComponent();
             this.customer = customer;
             carManager = new CarManager();
+            transactionManager = new TransactionManager();
             cars = new List<Car>();
             car = new Car();
+            transaction = new Transaction();
+            transactions = new List<Transaction>();
             insertCustomerData();
             retrieveCarData();
             txtDate.Text = DateTime.Now.ToString();
@@ -81,8 +88,37 @@ namespace WPFPresntationLayer
                 return;
             }
             int result = 0;
-            //we stop here
-           // result = 
+            transaction.CustomerId = customer.CustomerID;
+            transaction.CarId = getCarId(comboCar.SelectedItem.ToString());
+            if (transaction.CarId <= 0)
+            {
+                lblTransactionNote.Content = "Please select a car!";
+                return;
+            }
+            lblTransactionNote.Content = "";
+            transaction.Price = txtPrice.Text;
+            transaction.Date = txtDate.Text;
+            result = transactionManager.addTransaction(transaction);
+            if (result == 0) 
+            {
+                lblTransactionNote.Content = "transaction did not done!";
+                return; 
+            }
+            lblTransactionNote.Content = "Transaction Added Correctly";
+            
+        }
+
+
+        private int getCarId(string selectedItem)
+        {
+            foreach (Car car in cars)
+            {
+                if (car.Name.Equals(selectedItem))
+                {
+                    return car.CarID;
+                }
+            }
+            return -1;
         }
 
         private bool validData()
