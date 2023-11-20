@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WPFPresntationLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50a021a12453a685b1e782dcc961920c86305835")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("WPFPresntationLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WPFPresntationLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

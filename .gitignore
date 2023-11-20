@@ -1,5 +1,7 @@
-
-
 */.vs/*
 .vs
 .vs/*
+.vs/
+.vs/MarwaCar/*
+.vs/ProjectEvaluation/
+ WPFPresntationLayer/obj/
