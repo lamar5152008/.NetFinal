@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessInerface\DataAccessInerface.csproj" />
+    <ProjectReference Include="..\DataObject\DataObject.csproj" />
+  </ItemGroup>
+
 </Project>

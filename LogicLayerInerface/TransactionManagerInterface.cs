@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using DataObject;
 
-namespace LogicLayerInerface
+namespace LogicLayerInterface
 {
     public interface TransactionManagerInterface
     {
-        int addTransaction(Transaction transaction);
+        int addTransaction(Trans transaction);
+        public List<Trans> getTransactionByCustomerId(int customerID);
     }
 }

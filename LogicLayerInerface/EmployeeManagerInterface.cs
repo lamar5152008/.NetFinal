@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LogicLayerInterface
 {
-    public interface EmployeeMangerInterface
+    public interface EmployeeManagerInterface
     {
         public int addNewEmployee(EmployeeVM employee);
         int deleteEmployee(Employee employee);

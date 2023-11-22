@@ -17,4 +17,12 @@
     <PackageReference Include="coverlet.collector" Version="3.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessFake\DataAccessFake.csproj" />
+    <ProjectReference Include="..\DataAccessInerface\DataAccessInerface.csproj" />
+    <ProjectReference Include="..\DataObject\DataObject.csproj" />
+    <ProjectReference Include="..\LogicLayerInerface\LogicLayerInerface.csproj" />
+    <ProjectReference Include="..\LogicLayer\LogicLayer.csproj" />
+  </ItemGroup>
+
 </Project>

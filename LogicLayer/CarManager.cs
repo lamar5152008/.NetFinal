@@ -12,7 +12,17 @@ namespace LogicLayer
 {
     public class CarManager : CarManagerInterface
     {
-        private CarAccessorInterface carAccessor = new CarAccessor();
+        private CarAccessorInterface carAccessor;
+
+        public CarManager()
+        {
+            carAccessor = new CarAccessor();
+        }
+
+        public CarManager(CarAccessorInterface carAccessor)
+        {
+            this.carAccessor = carAccessor;
+        }
 
         public int add(Car car)
         {

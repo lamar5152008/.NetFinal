@@ -9,6 +9,7 @@ namespace DataAccessInterface
 {
     public interface TransactionAccessorInterface
     {
-        public int insert(Transaction transaction);
+        public int insert(Trans transaction);
+        public List<Trans> selectTransactionByCustomerId(int customerID);
     }
 }

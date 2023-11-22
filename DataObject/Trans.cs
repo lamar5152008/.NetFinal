@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataObject
 {
-    public class Transaction
+    public class Trans
     {
         public int ID {  get; set; }
         public int CustomerId { get; set; }

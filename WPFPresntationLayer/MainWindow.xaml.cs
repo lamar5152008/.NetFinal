@@ -25,7 +25,7 @@ namespace WPFPresntationLayer
     /// </summary>
     public partial class MainWindow : Window
     {
-        private EmployeeMangerInterface _employeeManger;
+        private EmployeeManagerInterface _employeeManger;
         private List<Employee> _employees;
         private Employee oldEmployee = new Employee();
         private CarManagerInterface carManager;

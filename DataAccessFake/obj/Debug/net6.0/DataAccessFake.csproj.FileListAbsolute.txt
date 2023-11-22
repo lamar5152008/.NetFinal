@@ -10,3 +10,9 @@ D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\
 D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\refint\DataAccessFake.dll
 D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\DataAccessFake.pdb
 D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\ref\DataAccessFake.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\bin\Debug\net6.0\DataAccessInerface.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\bin\Debug\net6.0\DataObject.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\bin\Debug\net6.0\DataAccessInerface.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\bin\Debug\net6.0\DataObject.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\DataAccessFake.csproj.AssemblyReference.cache
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Marwa\github\.NetFinal\DataAccessFake\obj\Debug\net6.0\DataAccessFake.csproj.CopyComplete

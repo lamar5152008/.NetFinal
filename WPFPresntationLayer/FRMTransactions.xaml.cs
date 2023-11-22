@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DataObject;
 using LogicLayer;
-using LogicLayerInerface;
+using LogicLayerInterface;
 using LogicLayerInterface;
 
 namespace WPFPresntationLayer
@@ -29,8 +29,8 @@ namespace WPFPresntationLayer
         private Car car;
         private List<Car> cars;
         private TransactionManagerInterface transactionManager;
-        private Transaction transaction = null;
-        private List<Transaction> transactions = null;
+        private Trans transaction = null;
+        private List<Trans> transactions = null;
         public FRMTransactions(Customer customer)
         {
             InitializeComponent();
@@ -39,11 +39,19 @@ namespace WPFPresntationLayer
             transactionManager = new TransactionManager();
             cars = new List<Car>();
             car = new Car();
-            transaction = new Transaction();
-            transactions = new List<Transaction>();
+            transaction = new Trans();
+            transactions = new List<Trans>();
             insertCustomerData();
             retrieveCarData();
+            showCustomerTransactions();
             txtDate.Text = DateTime.Now.ToString();
+        }
+
+        private void showCustomerTransactions()
+        {
+            //
+            transactions = transactionManager.getTransactionByCustomerId(customer.CustomerID);
+            dataGridTransactions.ItemsSource = transactions;
         }
 
         private void retrieveCarData()
@@ -105,7 +113,9 @@ namespace WPFPresntationLayer
                 return; 
             }
             lblTransactionNote.Content = "Transaction Added Correctly";
-            
+            showCustomerTransactions();
+
+
         }
 
 

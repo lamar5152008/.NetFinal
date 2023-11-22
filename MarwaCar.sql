@@ -362,3 +362,14 @@ AS
 		Return @@ROWCOUNT
  END
 GO
+print '' print '*** creating sp_select_transactions_by_customerId ***'
+GO
+CREATE PROCEDURE [dbo].[sp_select_transactions_by_customerId]
+(@customerID int)
+AS    
+	BEGIN
+		SELECT [transactionID], [customerId], [CarId], [Price], [Date]
+		FROM [dbo].[transactions]	
+		WHERE [customerId] = @customerID;	  
+	END
+GO

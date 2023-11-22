@@ -12,7 +12,17 @@ namespace LogicLayer
 {
     public class CustomerManager : CustomerManagerInterface
     {
-        private CustomerAccessorInterface customerAccessor = new CustomerAccessor();
+        private CustomerAccessorInterface customerAccessor;
+
+        public CustomerManager()
+        {
+            customerAccessor = new CustomerAccessor();
+        }
+
+        public CustomerManager(CustomerAccessorInterface customerAccessor)
+        {
+            this.customerAccessor = customerAccessor;
+        }
 
         public int addCustomer(Customer customer)
         {

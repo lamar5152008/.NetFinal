@@ -11,11 +11,25 @@ using DataObject;
 
 namespace LogicLayer
 {
-    public class EmployeeManger : EmployeeMangerInterface
+    public class EmployeeManager : EmployeeManagerInterface
     {
-        private EmployeeAccessorInterface _employeeAccessor = new EmployeeAccessor();
-        private EmployeeVM _employeeVM = new EmployeeVM();
-        private List<Employee> _employees = new List<Employee>();
+        private EmployeeAccessorInterface _employeeAccessor;
+        private EmployeeVM _employeeVM;
+        private List<Employee> _employees;
+
+        public EmployeeManager()
+        {
+            _employeeAccessor = new EmployeeAccessor();
+            _employeeVM = new EmployeeVM();
+            _employees = new List<Employee>();
+        }
+
+        public EmployeeManager(EmployeeAccessorInterface employeeAccessor)
+        {
+            _employeeAccessor = employeeAccessor;
+            _employeeVM = new EmployeeVM();
+            _employees = new List<Employee>();
+        }
 
         public int addNewEmployee(EmployeeVM employee)
         {

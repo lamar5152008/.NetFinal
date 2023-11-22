@@ -7,14 +7,41 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "DataAccessFake/1.0.0": {
+        "dependencies": {
+          "DataAccessInerface": "1.0.0",
+          "DataObject": "1.0.0"
+        },
         "runtime": {
           "DataAccessFake.dll": {}
+        }
+      },
+      "DataAccessInerface/1.0.0": {
+        "dependencies": {
+          "DataObject": "1.0.0"
+        },
+        "runtime": {
+          "DataAccessInerface.dll": {}
+        }
+      },
+      "DataObject/1.0.0": {
+        "runtime": {
+          "DataObject.dll": {}
         }
       }
     }
   },
   "libraries": {
     "DataAccessFake/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataAccessInerface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataObject/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "DataAccessInerface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DataObject": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DataAccessInerface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccessInerface.dll": {}
+        }
+      },
+      "DataObject/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/DataObject.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataObject.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DataAccessInerface/1.0.0": {
+      "type": "project",
+      "path": "../DataAccessInerface/DataAccessInerface.csproj",
+      "msbuildProject": "../DataAccessInerface/DataAccessInerface.csproj"
+    },
+    "DataObject/1.0.0": {
+      "type": "project",
+      "path": "../DataObject/DataObject.csproj",
+      "msbuildProject": "../DataObject/DataObject.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "DataAccessInerface >= 1.0.0",
+      "DataObject >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Samar\\.nuget\\packages\\": {}
@@ -33,7 +71,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessInerface\\DataAccessInerface.csproj": {
+              "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessInerface\\DataAccessInerface.csproj"
+            },
+            "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj": {
+              "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
