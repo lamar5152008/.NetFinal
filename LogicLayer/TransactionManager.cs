@@ -13,9 +13,15 @@ namespace LogicLayer
     public class TransactionManager : TransactionManagerInterface
     {
         private TransactionAccessorInterface _transactionAccessor;
+
         public TransactionManager()
         {
             _transactionAccessor = new TransactionAccessor();
+        }
+
+        public TransactionManager(TransactionAccessorInterface transactionAccessor)
+        {
+            _transactionAccessor = transactionAccessor;
         }
 
         public int addTransaction(Trans transaction)

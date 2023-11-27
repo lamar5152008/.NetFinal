@@ -36,7 +36,7 @@ namespace WPFPresntationLayer
         public MainWindow()
         {
             InitializeComponent();
-            _employeeManger = new EmployeeManger();
+            _employeeManger = new EmployeeManager();
             tcAdmin.Visibility = Visibility.Hidden;
             tcManager.Visibility = Visibility.Hidden;
             tcResption.Visibility = Visibility.Hidden;

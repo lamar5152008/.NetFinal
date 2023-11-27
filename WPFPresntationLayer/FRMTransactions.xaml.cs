@@ -15,7 +15,6 @@ using System.Windows.Shapes;
 using DataObject;
 using LogicLayer;
 using LogicLayerInterface;
-using LogicLayerInterface;
 
 namespace WPFPresntationLayer
 {
@@ -29,8 +28,8 @@ namespace WPFPresntationLayer
         private Car car;
         private List<Car> cars;
         private TransactionManagerInterface transactionManager;
-        private Trans transaction = null;
-        private List<Trans> transactions = null;
+        private Trans transaction;
+        private List<Trans> transactions;
         public FRMTransactions(Customer customer)
         {
             InitializeComponent();

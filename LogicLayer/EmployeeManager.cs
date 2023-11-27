@@ -15,20 +15,20 @@ namespace LogicLayer
     {
         private EmployeeAccessorInterface _employeeAccessor;
         private EmployeeVM _employeeVM;
-        private List<Employee> _employees;
+        private List<EmployeeVM> _employees;
 
         public EmployeeManager()
         {
             _employeeAccessor = new EmployeeAccessor();
             _employeeVM = new EmployeeVM();
-            _employees = new List<Employee>();
+            _employees = new List<EmployeeVM>();
         }
 
         public EmployeeManager(EmployeeAccessorInterface employeeAccessor)
         {
             _employeeAccessor = employeeAccessor;
             _employeeVM = new EmployeeVM();
-            _employees = new List<Employee>();
+            _employees = new List<EmployeeVM>();
         }
 
         public int addNewEmployee(EmployeeVM employee)
@@ -61,7 +61,7 @@ namespace LogicLayer
             return result;
         }
 
-        public List<Employee> GetAllEmployees()
+        public List<EmployeeVM> GetAllEmployees()
         {
             _employees = _employeeAccessor.selectAllEmployees();
             return _employees; 
@@ -69,7 +69,9 @@ namespace LogicLayer
 
         public List<string> getEmployeeRoles(int isVerifyUser)
         {
-            return _employeeVM.Roles;
+            List<string> roles = new List<string>();
+            roles = _employeeAccessor.getEmployeeRoles(isVerifyUser);
+            return roles;
         }
 
         public int verifyUser(string userName, string password)

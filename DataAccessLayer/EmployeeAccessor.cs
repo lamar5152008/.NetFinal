@@ -97,9 +97,9 @@ namespace DataAccessLayer
             return employeeId;
         }
 
-        public List<Employee> selectAllEmployees()
+        public List<EmployeeVM> selectAllEmployees()
         {
-            List<Employee> employees = new List<Employee>();
+            List<EmployeeVM> employees = new List<EmployeeVM>();
             // 1- connect to databases
             SqlConnection conn = DataBasesConnection.createMSSqlConnection();
             // 2- determain the store prosdure 
@@ -113,7 +113,7 @@ namespace DataAccessLayer
                 {
                     while (reader.Read())
                     {
-                        Employee employee = new Employee();
+                        EmployeeVM employee = new EmployeeVM();
                         employee.EmployeeID = reader.GetInt32(0);
                         employee.GivenName = reader.GetString(1);
                         employee.FamilyName = reader.GetString(2);

@@ -36,41 +36,64 @@ namespace LogicLayerTest
             int actual = _EmployeeManager.addNewEmployee(_employee);
             Assert.That(actual, Is.EqualTo(result));
         }
-        //[Test]
-        //public void TestDeleteCustomer()
-        //{
-        //    //1- initial
-        //    _employee.CustomerID = 3;
-        //    _employee.FirstName = "test3";
-        //    _employee.LastName = "last3";
-        //    _employee.Phone = "Phone3";
-        //    _employee.Email = "Email3";
-        //    int result = 1;
-        //    int actual = _customerManager.deleteCustomer(_employee);
-        //    Assert.That(actual, Is.EqualTo(result));
-        //}
+        [Test]
+        public void TestDeleteEmployee()
+        {
+            //1- initial
+            _employee.EmployeeID = 3;
+            _employee.GivenName = "Abc";
+            _employee.FamilyName = "DDD";
+            _employee.Phone = "123456789";
+            _employee.Email = "ABC@Email.com";
+            _employee.Password = "newuser";
+            _employee.Active = true;
+            int result = 1;
+            int actual = _EmployeeManager.deleteEmployee(_employee);
+            Assert.That(actual, Is.EqualTo(result));
+        }
 
-        //[Test]
-        //public void TestEditCustomer()
-        //{
-        //    //1- initial
-        //    Customer customer = new Customer();
-        //    customer.CustomerID = 1;
-        //    customer.FirstName = "customer1";
-        //    customer.LastName = "lastLast";
-        //    customer.Phone = "999999999";
-        //    customer.Email = "email@Email.com";
-        //    int result = 1;
-        //    int actual = _customerManager.edit(customer);
-        //    Assert.That(actual, Is.EqualTo(result));
-        //}
-        //[Test]
-        //public void TestGetAllCustomers()
-        //{
-        //    //1- initial
-        //    int result = 3;
-        //    int actual = _customerManager.getAllCustomers().Count;
-        //    Assert.That(actual, Is.EqualTo(result));
-        //}
+        [Test]
+        public void TestEditEmployee()
+        {
+            //1- initial
+            _employee.EmployeeID = 3;
+            _employee.GivenName = "Abd";
+            _employee.FamilyName = "DDD";
+            _employee.Phone = "123456789";
+            _employee.Email = "ABC@Email.com";
+            _employee.Password = "newuser";
+            _employee.Active = true;
+            int result = 1;
+            int actual = _EmployeeManager.EditEmployee(_employee);
+            Assert.That(actual, Is.EqualTo(result));
+        }
+        [Test]
+        public void TestGetAllEmployees()
+        {
+            //1- initial
+            int result = 3;
+            int actual = _EmployeeManager.GetAllEmployees().Count;
+            Assert.That(actual, Is.EqualTo(result));
+        }
+
+        [Test]
+        public void TestGetEmployeeRoles()
+        {
+            //1- initial
+            int employeeId = 3;
+            int result = 1;
+            int actual = _EmployeeManager.getEmployeeRoles(employeeId).Count;
+            Assert.That(actual, Is.EqualTo(result));
+        }
+        [Test]
+        public void TestVerifyUser()
+        {
+            //1- initial
+            string username= "email1@Email.com";
+            string password = "newuser";
+            int result = 0;
+            int actual = _EmployeeManager.verifyUser(username,password);
+            Assert.That(actual, Is.GreaterThan(result));
+        }
     }
 }

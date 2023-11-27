@@ -1,0 +1,385 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\WPFPresntationLayer\\WPFPresntationLayer.csproj": {}
+  },
+  "projects": {
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessInerface\\DataAccessInerface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessInerface\\DataAccessInerface.csproj",
+        "projectName": "DataAccessInerface",
+        "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessInerface\\DataAccessInerface.csproj",
+        "packagesPath": "C:\\Users\\Samar\\.nuget\\packages\\",
+        "outputPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessInerface\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessLayer\\DataAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectName": "DataAccessLayer",
+        "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Samar\\.nuget\\packages\\",
+        "outputPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessInerface\\DataAccessInerface.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessInerface\\DataAccessInerface.csproj"
+              },
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj",
+        "projectName": "DataObject",
+        "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj",
+        "packagesPath": "C:\\Users\\Samar\\.nuget\\packages\\",
+        "outputPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayerInerface\\LogicLayerInerface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayerInerface\\LogicLayerInerface.csproj",
+        "projectName": "LogicLayerInerface",
+        "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayerInerface\\LogicLayerInerface.csproj",
+        "packagesPath": "C:\\Users\\Samar\\.nuget\\packages\\",
+        "outputPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayerInerface\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayer\\LogicLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayer\\LogicLayer.csproj",
+        "projectName": "LogicLayer",
+        "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayer\\LogicLayer.csproj",
+        "packagesPath": "C:\\Users\\Samar\\.nuget\\packages\\",
+        "outputPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessInerface\\DataAccessInerface.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessInerface\\DataAccessInerface.csproj"
+              },
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataAccessLayer\\DataAccessLayer.csproj"
+              },
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj"
+              },
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayerInerface\\LogicLayerInerface.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayerInerface\\LogicLayerInerface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\WPFPresntationLayer\\WPFPresntationLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\WPFPresntationLayer\\WPFPresntationLayer.csproj",
+        "projectName": "WPFPresntationLayer",
+        "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\WPFPresntationLayer\\WPFPresntationLayer.csproj",
+        "packagesPath": "C:\\Users\\Samar\\.nuget\\packages\\",
+        "outputPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\WPFPresntationLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\DataObject\\DataObject.csproj"
+              },
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayerInerface\\LogicLayerInerface.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayerInerface\\LogicLayerInerface.csproj"
+              },
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayer\\LogicLayer.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Marwa\\github\\.NetFinal\\LogicLayer\\LogicLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
