@@ -26,7 +26,7 @@ namespace WPFPresntationLayer
     public partial class MainWindow : Window
     {
         private EmployeeManagerInterface _employeeManger;
-        private List<Employee> _employees;
+        private List<EmployeeVM> _employees;
         private Employee oldEmployee = new Employee();
         private CarManagerInterface carManager;
         private bool editCar = false;
@@ -40,7 +40,7 @@ namespace WPFPresntationLayer
             tcAdmin.Visibility = Visibility.Hidden;
             tcManager.Visibility = Visibility.Hidden;
             tcResption.Visibility = Visibility.Hidden;
-            _employees = new List<Employee>();
+            _employees = new List<EmployeeVM>();
             carManager = new CarManager();
             customerManager = new CustomerManager();
             customer = new Customer();
@@ -48,60 +48,86 @@ namespace WPFPresntationLayer
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            var userName = txt_username.Text;
-            string password = txt_password.Password.ToString();
-
-            Boolean isUserNameValid = validatUserName(userName);
-            Boolean isPasswordValid = validatPassword(password);
-            if (isUserNameValid && isPasswordValid)
+            if (btnLogin.Content.ToString() == "login")
             {
-                lblLoginMessages.Content = "user name and password valid";
-                int isVerifyUser = _employeeManger.verifyUser(userName, password);
-                if (isVerifyUser != 0)
+                var userName = txt_username.Text;
+                string password = txt_password.Password.ToString();
+
+                Boolean isUserNameValid = validatUserName(userName);
+                Boolean isPasswordValid = validatPassword(password);
+                if (isUserNameValid && isPasswordValid)
                 {
-                    List<string> roles = new List<string>();
-                    roles = _employeeManger.getEmployeeRoles(isVerifyUser);
-                    foreach (string role in roles)
+                    lblLoginMessages.Content = "";
+                    int isVerifyUser = _employeeManger.verifyUser(userName, password);
+                    if (isVerifyUser != 0)
                     {
-                        lblLoginMessages.Content += role;
-                        if (role == "Admin")
+                        btnLogin.Content = "logout";
+                        lbl_username.Visibility = Visibility.Hidden; 
+                        lbl_password.Visibility = Visibility.Hidden;
+                        txt_username.Text = string.Empty;
+                        txt_password.Password = string.Empty;
+                        txt_username.Visibility = Visibility.Hidden;
+                        txt_password.Visibility = Visibility.Hidden;
+                        List<string> roles = new List<string>();
+                        roles = _employeeManger.getEmployeeRoles(isVerifyUser);
+                        foreach (string role in roles)
                         {
-                            tcAdmin.Visibility = Visibility.Visible;
-                            tcManager.Visibility = Visibility.Hidden;
-                            tcResption.Visibility = Visibility.Hidden;
-                            _employees = _employeeManger.GetAllEmployees();
-                            dgAllEmployee.ItemsSource = _employees;
+                            lblLoginMessages.Content += role;
+                            if (role == "Admin")
+                            {
+                                tcAdmin.Visibility = Visibility.Visible;
+                                tcManager.Visibility = Visibility.Hidden;
+                                tcResption.Visibility = Visibility.Hidden;
+                                _employees = _employeeManger.GetAllEmployees();
+                                dgAllEmployee.ItemsSource = _employees;
+                            }
+                            if (role == "Manager")
+                            {
+                                tcAdmin.Visibility = Visibility.Hidden;
+                                tcManager.Visibility = Visibility.Visible;
+                                tcResption.Visibility = Visibility.Hidden;
+                                List<Car> cars = new List<Car>();
+                                cars = carManager.getAllCars();
+                                dgCars.ItemsSource = cars;
+                            }
+                            if (role == "Reciption")
+                            {
+                                tcAdmin.Visibility = Visibility.Hidden;
+                                tcManager.Visibility = Visibility.Hidden;
+                                tcResption.Visibility = Visibility.Visible;
+                                List<Customer> customers = new List<Customer>();
+                                customers = customerManager.getAllCustomers();
+                                dataGridReciption.ItemsSource = customers;
+                            }
                         }
-                        if (role == "Manager")
-                        {
-                            tcAdmin.Visibility = Visibility.Hidden;
-                            tcManager.Visibility = Visibility.Visible;
-                            tcResption.Visibility = Visibility.Hidden;
-                            List<Car> cars = new List<Car>();
-                            cars = carManager.getAllCars();
-                            dgCars.ItemsSource = cars;
-                        }
-                        if (role == "Reciption")
-                        {
-                            tcAdmin.Visibility = Visibility.Hidden;
-                            tcManager.Visibility = Visibility.Hidden;
-                            tcResption.Visibility = Visibility.Visible;
-                            List<Customer> customers = new List<Customer>();
-                            customers = customerManager.getAllCustomers();
-                            dataGridReciption.ItemsSource = customers;
-                        }
+                    }
+                    else
+                    {
+                        lblLoginMessages.Content = "user name and password valid but not verify";
                     }
                 }
                 else
                 {
-                    lblLoginMessages.Content = "user name and password valid but not verify";
+                    lblLoginMessages.Content = "user name and password not valid";
+
                 }
+               
             }
             else
             {
-                lblLoginMessages.Content = "user name and password not valid";
-
+                lblLoginMessages.Content = "";
+                btnLogin.Content = "login";
+                txt_username.Text = string.Empty;
+                txt_password.Password = string.Empty;
+                txt_username.Visibility = Visibility.Visible;
+                txt_password.Visibility = Visibility.Visible;
+                lbl_username.Visibility = Visibility.Visible;
+                lbl_password.Visibility = Visibility.Visible;
+                tcAdmin.Visibility = Visibility.Hidden;
+                tcManager.Visibility = Visibility.Hidden;
+                tcResption.Visibility = Visibility.Hidden;
             }
+            
         }
 
         private bool validatPassword(string password)
@@ -167,7 +193,7 @@ namespace WPFPresntationLayer
             }
 
             clearFormData();
-            _employees = new List<Employee>();
+            _employees = new List<EmployeeVM>();
             _employees = _employeeManger.GetAllEmployees();
             dgAllEmployee.ItemsSource = _employees;
 
@@ -226,7 +252,7 @@ namespace WPFPresntationLayer
                     return;
                 }
                 lblAdminMessages.Content = "Employee deleted correctly";
-                _employees = new List<Employee>();
+                _employees = new List<EmployeeVM>();
                 _employees = _employeeManger.GetAllEmployees();
                 dgAllEmployee.ItemsSource = _employees;
             }

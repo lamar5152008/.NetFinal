@@ -37,7 +37,7 @@ GO
 INSERT INTO [dbo].[Employee]
          ([GivenName], [FamilyName], [Phone], [Email])
 	VALUES
-	    ('Marwa', 'NASR', '319876546', 'Marwa@comany.com'),
+	    ('Marwa', 'NASR', '319876546', 'Marwa@company.com'),
 		('Mahammed', 'amgad', '319000007', 'mahammed@company.com'),
 		('Leen', 'Ibrahim', '319872340', 'leen@company.com'),
 		('Lamar', 'Ayman', '319501276', 'lamar@company.com'),
