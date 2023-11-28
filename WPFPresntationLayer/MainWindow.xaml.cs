@@ -297,11 +297,11 @@ namespace WPFPresntationLayer
             {
                 car.CarID = oldCar.CarID;
                 result = carManager.edit(car);
+                
             }
             else
             {
                 result = carManager.add(car);
-                editCar = false;
             }
             if (result == 0)
             {
@@ -311,6 +311,7 @@ namespace WPFPresntationLayer
             {
                 lblCarFromError.Foreground = Brushes.Black;
                 lblCarFromError.Content = "car data added correctly";
+                editCar = false;
                 clearCarForm();
                 List<Car> cars = new List<Car>();
                 cars = carManager.getAllCars();
