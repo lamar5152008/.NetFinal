@@ -33,6 +33,7 @@ namespace WPFPresntationLayer
         private Car oldCar = new Car();
         private CustomerManagerInterface customerManager;
         private Customer customer;
+        private List<string> Roles;
         public MainWindow()
         {
             InitializeComponent();
@@ -44,6 +45,7 @@ namespace WPFPresntationLayer
             carManager = new CarManager();
             customerManager = new CustomerManager();
             customer = new Customer();
+            Roles = new List<string>();
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -80,6 +82,11 @@ namespace WPFPresntationLayer
                                 tcResption.Visibility = Visibility.Hidden;
                                 _employees = _employeeManger.GetAllEmployees();
                                 dgAllEmployee.ItemsSource = _employees;
+                                Roles.Add("Manager");
+                                Roles.Add("Admin");
+                                Roles.Add("Reciption");
+                                comboRoles.ItemsSource = Roles; comboRoles.SelectedIndex = 0;
+                               
                             }
                             if (role == "Manager")
                             {
@@ -162,7 +169,11 @@ namespace WPFPresntationLayer
             employee.Active = cbActive.IsChecked == true;
             employee.Password = txtPassword.Text;
             employee.Roles = new List<string>();
-            employee.Roles.Add("Reciption");
+            if (comboRoles.SelectedItem != null)
+            {
+                employee.Roles.Add(comboRoles.SelectedItem.ToString());
+            }
+            
             int employeeId = 0;
             if (btnSubmit.Content.ToString() == "New")
             {
@@ -196,6 +207,11 @@ namespace WPFPresntationLayer
             _employees = new List<EmployeeVM>();
             _employees = _employeeManger.GetAllEmployees();
             dgAllEmployee.ItemsSource = _employees;
+            Roles = _employeeManger.getEmployeeRoles(oldEmployee.EmployeeID);
+            if (Roles != null)
+            {
+                comboRoles.SelectedItem = Roles[0];
+            }
 
         }
 
@@ -242,7 +258,7 @@ namespace WPFPresntationLayer
 
         private void btnDeleteEmployee_Click(object sender, RoutedEventArgs e)
         {
-            Employee employee = (Employee)dgAllEmployee.SelectedItem;
+            EmployeeVM employee = (EmployeeVM)dgAllEmployee.SelectedItem;
             if (employee != null)
             {
                 int result = _employeeManger.deleteEmployee(employee);
@@ -278,6 +294,12 @@ namespace WPFPresntationLayer
             txtPhone.Text = oldEmployee.Phone;
             cbActive.IsChecked = oldEmployee.Active;
             btnSubmit.Content = "Update";
+            Roles = _employeeManger.getEmployeeRoles(oldEmployee.EmployeeID);
+            if (Roles != null)
+            {
+                comboRoles.SelectedItem = Roles[0];
+            }
+            
         }
 
         private void btnSubmitCar_Click(object sender, RoutedEventArgs e)

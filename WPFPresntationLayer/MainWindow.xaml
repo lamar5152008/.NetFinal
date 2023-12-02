@@ -126,10 +126,13 @@
                             <Grid Grid.Column="5">
                                 <Label x:Name="lblActive" Content="Active"/>
                             </Grid>
-                            <Grid Grid.Column="6"></Grid>
+                            <Grid Grid.Column="6">
+                                <Label x:Name="lblRole" Content="Role"/>
+                            </Grid>
                         </Grid>
                         <Grid Grid.Row="1">
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
@@ -157,6 +160,9 @@
                                 <CheckBox x:Name="cbActive"/>
                             </Grid>
                             <Grid Grid.Column="6">
+                                <ComboBox x:Name="comboRoles"/>
+                            </Grid>
+                            <Grid Grid.Column="7">
                                 <Button x:Name="btnSubmit" Content="New" Click="btnSubmit_Click"/>
                             </Grid>
                         </Grid>

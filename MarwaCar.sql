@@ -69,7 +69,7 @@ print '' print '*** creating EmployeeRole table ***'
 GO
 CREATE TABLE [dbo] . [EmployeeRole] (
     [EmployeeID]       [int]             NOT NULL,
-	[RoleID]           [nvarchar](50)    NOT NULL,
+	[RoleID]           [nvarchar](50) DEFAULT  'Reciption'  NOT NULL,
 	
 	CONSTRAINT [fk_EmployeeRole_EmployeeID] FOREIGN KEY([EmployeeID])
 	    REFERENCES [dbo].[Employee]([EmployeeID]),
@@ -88,7 +88,9 @@ INSERT INTO [dbo].[EmployeeRole]
 		 VALUES
 		     (100000, 'Admin'),
 			 (100001, 'Manager'),
-			 (100002, 'Reciption')
+			 (100002, 'Reciption'),
+			 (100003,'Reciption'),
+			 (100004,'Reciption')
 GO			 
 
 

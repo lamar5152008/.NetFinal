@@ -64,13 +64,18 @@ namespace LogicLayer
         public List<EmployeeVM> GetAllEmployees()
         {
             _employees = _employeeAccessor.selectAllEmployees();
+            foreach (EmployeeVM emp in _employees)
+            {
+                emp.Roles = new List<string>();
+                emp.Roles = getEmployeeRoles(emp.EmployeeID);
+            }
             return _employees; 
         }
 
-        public List<string> getEmployeeRoles(int isVerifyUser)
+        public List<string> getEmployeeRoles(int employeeID)
         {
             List<string> roles = new List<string>();
-            roles = _employeeAccessor.getEmployeeRoles(isVerifyUser);
+            roles = _employeeAccessor.getEmployeeRoles(employeeID);
             return roles;
         }
 
